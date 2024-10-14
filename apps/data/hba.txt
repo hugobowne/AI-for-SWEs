@@ -1,0 +1,86 @@
+
+hugo bowne-anderson
+
+    About me
+    Podcast
+    education
+    Writing
+    Talks
+
+data scientist - educator - writer - podcaster
+portrait
+
+I'm an independent data and AI scientist, consultant, writer, educator & podcaster. My interests include promoting data & AI literacy/fluency, helping to spread data skills through organizations and society and lowering the barrier to entry for data science, analysis, and machine learning. Previously, I was Head of Developer Relations at Outerbounds, a company committed to building infrastructure that provides a solid foundation for machine learning applications of all shapes and sizes. I am also the host of the industry podcast Vanishing Gradients. I was previously Head of Marketing and Data Science Evangelism at Coiled, building solutions for scalable data science and machine learning in Python. Before this, I was at DataCamp, a data science training company educating over 4 million learners worldwide through interactive courses on the use of Python, R, SQL, Git, Bash and Spreadsheets in a data science context. While there, I spearheaded the development of over 25 courses in DataCamp’s Python curriculum, impacting over 250,000 learners worldwide through my own courses. I hosted and produced the data science podcast DataFramed, in which I used long-format interviews with working data scientists to delve into what actually happens in the space and what impact it can and does have.
+
+I love to write about all things data; two of my more recent articles from Harvard Business Review are What Data Scientists Really Do, According to 35 Data Scientists and Your Data Literacy Depends on Understanding the Types of Data and How They’re Captured (keep your eyes peeled for Part II of this piece).
+
+I also enjoy speaking and teaching tutorials/workshops at conferences. Recent highlights for me include PyData NYC, Innovation X's Chief Data Officer Summit, PyCon and SciPy (see below for videos).
+
+For more details on all of this and more, scroll down!
+podcast
+portrait
+
+As data science, analytics, machine learning and AI capabilities spread through businesses and society at large, it's a challenge to keep track of what is happening in the data space, both at the forefront and in terms of general trends and skills. I started the DataFramed podcast to create a living, evolving audio document to share with people at all stages in their data journeys. Each episode is a long format interview with a professional in the space (from data scientists to tool builders to consultants) broken up with short segments that touch on topics critical to the industry. I've interviewed data scientists from companies such as Google, AT&T, McKinsey & Company, Airbnb, iRobot, Booking.com, Buzzfeed, TD Ameritrade, Etsy, StitchFix, Doctors without Borders, Github and Microsoft, to name several.
+
+As a result of the podcast, I've been called many things, such as a "data science anthropologist" (Michael Chow, Learning Engineer and Data Scientist at DataCamp), "thought surgeon" (Cassie Kozyrkov, Chief Decision Scientist at Google), "the Larry King of data science" (anonymous reviewer on iTunes) and a "podcaster" (most people).
+
+Check out the podcast below or find it on your favourite pod player (we're on iTunes, Overcast, Spotify and more; if you find a player we're not on, let me know).
+
+If you'd like guidance, you can check out any of the following: Episode 1 with Hilary Mason about data science, past, present and future; a conversation about large scale, online experimentation with Lukas Vermeer, who is in charge of online experiments at Booking.com; Cassie Kozyrkov, Chief Decision Scientist at Google, and I waxing lyrical about the intersections of data science, decision intelligence and decision making; Gabriel Straub, Head of Data Science and Architecture at the BBC, on what the future of machine learning looks like there; Cathy O'Neill on Weapons of Math Destruction, the dangerous algorithms at play in society at large; Skipper Seabold of Civis Analytics on the (current and looming) Credibility Crisis in Data Science; Renee Teate on Becoming a Data Scientist; Drew Conway on Building Data Science Teams; Angela Bassa, Director of Data Science at iRobot, on Managing Data Science Teams; Wes McKinney on the future of Data Science Tool Building.
+education
+Hugo in front of green screen
+curriculum engineering at scale
+
+I've always been an educator and an explainer. In my previous incarnation in academic research, I spent a lot of time teaching statistics, programming and practical data science to researchers at Yale University, New Haven, and the Max Planck Institute for Cell Biology and Genetics, Dresden, where I was a postdoctoral fellow.
+
+I joined DataCamp to teach data science at scale, originally as a Python Curriculum Engineer, charged with building out a curriculum that leveraged modern browser technologies to teach skills to work with data, from machine learning to data visualization, data wrangling and statistics, among many others. The vision has always been Learn By Doing and, to this end, after showing learners short videos by experts in the field, we get them coding as quickly as possible in the browser and provide automated, tailored feedback.
+
+Joining DataCamp as the 7th employee (we're now ~150), I've had the pleasure of playing a pivotal role in the development of our product and curriculum, at a high level, on the technical side of things, and as a community builder to connect the company as a whole to the broader data community. Early, fond memories involve working with Travis Oliphant and Peter Wang of Anaconda to build out core pandas and data visualization courses, working with Andreas Müller (core developer & co-maintainer of scikit-learn) on our Supervised Learning with scikit-learn course, with Katharine Jarmul (kjamistan) on Natural Language Processing in Python and with Justin Bois (Caltech) on several Statistical Thinking in Python courses.
+
+tutorials/workshops
+
+I love to teach in person. There is no substitute for the electricity generated by throwing around ideas, tools, techniques and data challenges in a room with other humans. And it's something that I miss dearly when I don't do it so I make sure to: I am a Software Carpentry and Data Carpentry Instructor. In Summer, 2018, I had the great pleasure of teaching a Genomics Data Carpentry and Machine Learning in R for the Carpentries at Cold Spring Harbour Laboratory with Jason Williams, where we piloted a Machine Learning in R lesson, which was really well-received (but there's much more work to be done!).
+
+I also regularly teach workshops and tutorials at conferences, such as SciPy and PyCon. You can check out some videos and materials under Talks below.
+HBA FB Live
+other initiatives
+
+I'm interested in exploring other ways to teach and discuss data science, machine learning and AI. To this end, I piloted a series of Facebook Live coding sessions at DataCamp, which saw up to 40K unique viewers. Two of my favourites are Getting Started with the Tidyverse through the Titanic data set and Web Scraping & NLP in Python, in which I scrape novels from the web and plot word frequency distributions.
+
+I enjoy writing tutorials. You can find a bunch I've written on DataCamp's community page by searching for my name. Here are a few to get started with:
+
+I'm constantly thinking about how data science notebook technologies can be used to design productive educational environments. You can check out Eric Ma's and my interactive Jupyter notebooks for our Bayesian data science workshops here on Binder (more context in the github repo here). I also built a DataCamp project that leverages the capabilities of Jupyter notebooks to create a novel educational experience: it's called "Word Frequency in Moby Dick" and in it, you'll get to scrape the novel Moby Dick from the website Project Gutenberg (which contains a large corpus of books), extract words from it and dive into analyzing the distribution of words using the Natural Language ToolKit (nltk).
+
+I've given a lot of webinars for business leaders, managers and learning and development leaders across several verticals. Highlights include: What Managers Need To Know About Machine Learning, Inside the Data Science Workflow and Data Literacy in the 21st Century.
+writing
+
+I like to write about data science and AI, with the goals of promoting data literacy and data fluency, along with building communication bridges across different segments of society to discuss the data and AI revolutions and how they impact our lives, along with how they may in the future. Two of my more recent articles from Harvard Business Review are What Data Scientists Really Do, According to 35 Data Scientists and Your Data Literacy Depends on Understanding the Types of Data and How They’re Captured (Part II coming to a browser near you soon).
+
+You can also check out articles I've written on The Case For Python in Scientific Computing, 3 Things I learned at JupyterCon and An Interview with François Chollet, creator of the deep learning package and Google AI researcher.
+
+I am currently writing a great deal and plan to be publishing work soon on a variety of topics, including: data science & AI for executives; the future of data and machine learning products; data science and the art of making business decisions; the possible futures of data science as a service; deep learning democratization.
+Selected Talks
+What Data Scientists Really Do, According to 50 Data Scientists
+
+This is a talk about what data scientists really do and what they consider to be the most pressing issues in the space. It's a fun talk to give as it's based on 50 conversations that I had on the DataFramed podcast. I have given it several times, including at PyData NYC and the New York Open Statistical Programming Meetup
+Bayesian Data Science Two Ways: Simulation and Probabilistic Programming
+
+SciPy 2018 Tutorial
+
+This was a tutorial that I co-taught with Eric Ma to build participants’ knowledge of Bayesian inference, workflows and decision making under uncertainty. We started with the basics of probability via simulation and analysis of real-world datasets, building up to an understanding of Bayes’ theorem. We then introduced the use of probabilistic programming to do statistical modelling. Throughout this tutorial, we used a mixture of instructional time and hands-on time. During instructional time, we used a variety of datasets to anchor our instruction; during hands-on time, which immediately followed instructional time, our participants applied the concepts learned to the Darwin’s finches dataset, which permeated the entire tutorial.
+Bayesian Data Science by Simulation
+
+PyCon 2019 Tutorial
+
+This tutorial was an Introduction to Bayesian data science through the lens of simulation or hacker statistics. Learners became familiar with many common probability distributions through i) matching them to real-world stories & ii) simulating them. They worked with joint/conditional probabilities, Bayes Theorem, prior/posterior distributions and likelihoods, while seeing their applications in real-world data analyses. They then saw the utility of Bayesian inference in parameter estimation and comparing groups and we wrapped up with a dive into the wonderful world of probabilistic programming using PyMC3.
+Location
+
+DataCamp
+350 5th Ave Suite 7730
+New York, New York 10118
+Contact
+
+conference surprise
+
+follow this link if you’re attending a data science conference and want to do something fun.
+Copyright © Hugo Bowne-Anderson 2019
