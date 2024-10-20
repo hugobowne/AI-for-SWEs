@@ -7,22 +7,30 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import fitz  # PyMuPDF
 import sqlite3
 from datetime import datetime
+import threading
 import uuid
 
-# Function to get a database connection
+# Thread-local storage for database connections
+local = threading.local()
+
+# Function to get a thread-local database connection
 def get_db_connection():
-    conn = sqlite3.connect('qa_traces.db', check_same_thread=False)
-    conn.execute('''CREATE TABLE IF NOT EXISTS conversations
-                    (id TEXT PRIMARY KEY, timestamp TEXT)''')
-    conn.execute('''CREATE TABLE IF NOT EXISTS messages
-                    (id TEXT PRIMARY KEY, conversation_id TEXT, 
-                     timestamp TEXT, role TEXT, content TEXT,
-                     FOREIGN KEY(conversation_id) REFERENCES conversations(id))''')
-    conn.execute('''CREATE TABLE IF NOT EXISTS feedback
-                    (id TEXT PRIMARY KEY, message_id TEXT, feedback INTEGER, 
-                     timestamp TEXT, FOREIGN KEY(message_id) REFERENCES messages(id))''')
-    conn.commit()
-    return conn
+    if not hasattr(local, "db_conn"):
+        local.db_conn = sqlite3.connect('qa_traces.db', check_same_thread=False)
+        local.db_conn.execute('''CREATE TABLE IF NOT EXISTS conversations
+                                 (id TEXT PRIMARY KEY, timestamp TEXT)''')
+        local.db_conn.execute('''CREATE TABLE IF NOT EXISTS messages
+                                 (id TEXT PRIMARY KEY, conversation_id TEXT, 
+                                  timestamp TEXT, role TEXT, content TEXT,
+                                  FOREIGN KEY(conversation_id) REFERENCES conversations(id))''')
+        local.db_conn.execute('''CREATE TABLE IF NOT EXISTS feedback
+                                 (id TEXT PRIMARY KEY, message_id TEXT, feedback INTEGER, 
+                                  timestamp TEXT, FOREIGN KEY(message_id) REFERENCES messages(id))''')
+        local.db_conn.commit()
+    return local.db_conn
+
+# Call this function on app launch to ensure the database is created upfront
+get_db_connection()
 
 # Function to start a new conversation
 def start_conversation():
@@ -32,18 +40,19 @@ def start_conversation():
     timestamp = datetime.now().isoformat()
     c.execute("INSERT INTO conversations VALUES (?, ?)", (conversation_id, timestamp))
     conn.commit()
+    print(f"New conversation started with ID: {conversation_id}")
     return conversation_id
 
 # Function to log a message in a conversation
 def log_message(conversation_id, role, content):
     conn = get_db_connection()
     c = conn.cursor()
-    message_id = str(uuid.uuid4())
-    timestamp = datetime.now().isoformat()
+    message_id = str(uuid.uuid4())  # Generate a new message ID
+    timestamp = datetime.now().isoformat()  # Get the current timestamp
     c.execute("INSERT INTO messages VALUES (?, ?, ?, ?, ?)", 
               (message_id, conversation_id, timestamp, role, content))
     conn.commit()
-    return message_id  # Return message_id to link it with feedback
+    return message_id  # Return the message ID properly
 
 # Function to log feedback (thumbs-up or thumbs-down)
 def log_feedback(message_id, feedback_value):
@@ -54,6 +63,7 @@ def log_feedback(message_id, feedback_value):
     c.execute("INSERT INTO feedback VALUES (?, ?, ?, ?)", 
               (feedback_id, message_id, feedback_value, timestamp))
     conn.commit()
+    print(f"Feedback logged: {feedback_id} | Message ID: {message_id} | Feedback: {feedback_value}")
 
 # Function to extract text from the PDF
 def extract_text_from_pdf(pdf_file_bytes):
@@ -68,20 +78,22 @@ def extract_text_from_pdf(pdf_file_bytes):
 def process_pdf(pdf_file_bytes):
     extracted_text = extract_text_from_pdf(pdf_file_bytes)
     document = Document(text=extracted_text)
+    # Specify a Hugging Face model for local embeddings
     embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
     index = VectorStoreIndex.from_documents([document], embed_model=embed_model)
     return index
 
-# Function to handle conversation, with option for model choice and logging traces
-def query_pdf(pdf, query, history, conversation_id, model_choice, mode_choice):
+# Complete query_pdf function with proper logging of messages
+def query_pdf(pdf, query, history, conversation_id, model_choice, message_id_state):
     if pdf is None:
-        return [("Please upload a PDF.", "")], history, conversation_id, None
+        return [("Please upload a PDF.", "")], history, conversation_id
     if not query.strip():
-        return [("Please enter a valid query.", "")], history, conversation_id, None
+        return [("Please enter a valid query.", "")], history, conversation_id
     
     # Start a new conversation if there isn't one
-    if mode_choice == "Conversation" and conversation_id is None:
-        conversation_id = start_conversation()
+    if conversation_id is None:
+        conversation_id = start_conversation()  # This should trigger conversation logging
+        print(f"New conversation started with ID: {conversation_id}")  # Add debugging statement
     
     try:
         # Choose between local (Ollama) or OpenAI model
@@ -91,31 +103,34 @@ def query_pdf(pdf, query, history, conversation_id, model_choice, mode_choice):
             openai_api_key = os.getenv("OPENAI_API_KEY")
             llm = OpenAI(api_key=openai_api_key, model="gpt-3.5-turbo")
 
-        index = process_pdf(pdf)
+        # Process the PDF file bytes directly
+        pdf_file_bytes = pdf
+        index = process_pdf(pdf_file_bytes)
         query_engine = index.as_query_engine(llm=llm)
 
-        if mode_choice == "Single Query":
-            # In Single Query Mode, no conversation context is used
-            response = query_engine.query(query)
-            return [(query, response.response)], [], None, None
+        # Add previous conversation to the query for context
+        conversation = ""
+        for h in history:
+            conversation += f"User: {h[0]}\nAssistant: {h[1]}\n"
+        conversation += f"User: {query}\n"
+        
+        # Query the index using the user's question with context
+        response = query_engine.query(conversation)
+        
+        # Log the user's query and the assistant's response
+        user_message_id = log_message(conversation_id, "user", query)  # Log user query and get message_id
+        assistant_message_id = log_message(conversation_id, "assistant", response.response)  # Log assistant response
+        
+        # Debugging statements for both message IDs
+        print(f"User message logged with ID: {user_message_id}")  
+        print(f"Assistant message logged with ID: {assistant_message_id}")  
 
-        elif mode_choice == "Conversation":
-            # In Conversation Mode, maintain conversation history
-            conversation = ""
-            for h in history:
-                conversation += f"User: {h[0]}\nAssistant: {h[1]}\n"
-            conversation += f"User: {query}\n"
-            
-            response = query_engine.query(conversation)
-            message_id = log_message(conversation_id, "user", query)  # Log query
-            log_message(conversation_id, "assistant", response.response)  # Log response
-            
-            history.append((query, response.response))
-            return history, history, conversation_id, message_id
-    
+        # Update the conversation history with a tuple (user's query, model's response)
+        history.append((query, response.response))
+        return history, history, conversation_id, assistant_message_id  # Return message_id for feedback
     except Exception as e:
         error_message = str(e)
-        return [("An error occurred", error_message)], history, conversation_id, None
+        return [("An error occurred", error_message)], history, conversation_id
 
 # Function to handle thumbs-up feedback
 def handle_thumbs_up(message_id):
@@ -152,11 +167,11 @@ with gr.Blocks() as app:
 
     # Connect query button to query_pdf function
     query_button.click(fn=query_pdf, 
-                       inputs=[pdf_upload, query_input, history_state, conversation_id_state, model_choice, mode_choice], 
-                       outputs=[output, history_state, conversation_id_state, message_id_state])
+                    inputs=[pdf_upload, query_input, history_state, conversation_id_state, model_choice, message_id_state], 
+                    outputs=[output, history_state, conversation_id_state, message_id_state])
 
     # Show feedback message when thumbs-up or thumbs-down is clicked
     thumbs_up_button.click(fn=handle_thumbs_up, inputs=[message_id_state], outputs=feedback_message)
     thumbs_down_button.click(fn=handle_thumbs_down, inputs=[message_id_state], outputs=feedback_message)
 
-app.launch(share=True)
+app.launch()
