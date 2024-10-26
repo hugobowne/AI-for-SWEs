@@ -14,6 +14,8 @@ llama-index-llms-ollama = "^0.3.2"
 sentence-transformers = "^3.1.1"
 llama-index-embeddings-huggingface = "^0.3.1"
 # add burr[start,opentelemetry] to the dependencies
+torch = "2.2.2"
+burr = {extras = ["opentelemetry", "start"], version = "^0.32.0"}
 
 [build-system]
 requires = ["poetry-core"]
