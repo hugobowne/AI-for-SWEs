@@ -13,7 +13,7 @@ pymupdf = "^1.24.10"
 llama-index-llms-ollama = "^0.3.2"
 sentence-transformers = "^3.1.1"
 llama-index-embeddings-huggingface = "^0.3.1"
-
+# add burr[start,opentelemetry] to the dependencies
 
 [build-system]
 requires = ["poetry-core"]
