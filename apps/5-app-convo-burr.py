@@ -89,6 +89,8 @@ def build_application(base_graph, conversation_id):
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
     # this will auto instrument the openAI client. No swapping of imports required!
     OpenAIInstrumentor().instrument()
+    from opentelemetry.instrumentation.ollama import OllamaInstrumentor
+    OllamaInstrumentor().instrument()
 
     tracker = LocalTrackingClient(project="ai-for-swes")
     app = (
