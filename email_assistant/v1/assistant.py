@@ -1,64 +1,43 @@
+import openai
 from burr.core import action, ApplicationBuilder, Application, State
-from burr.core.graph import Graph, GraphBuilder
-from burr.tracking import LocalTrackingClient
+from pypdf import PdfReader
 
 
 @action(reads=[], writes=["pdf_text"])
-def process_pdf(state: State, pdf_file: bytes) -> State:
-    document = fitz.open(stream=pdf_file, filetype="pdf")
-    text = ""
-    for page_num in range(document.page_count):
-        page = document.load_page(page_num)
-        text += page.get_text("text")
-    
+def process_pdf(state: State, pdf_file_path: str) -> State:
+    """Extract text from a PDF and return it as a string."""
+    reader = PdfReader(pdf_file_path)
+    text = " ".join([page.extract_text() for page in reader.pages])
     return state.update(pdf_text=text)
 
 
-@action(reads=["pdf_text"], writes=[])
-def store_document(state: State) -> State:
-    return state
+@action(reads=["pdf_text"], writes=["llm_reply"])
+def generate_email(state: State, instructions: str) -> State:
+    """Generate answer based on the PDF's text using an LLM following the instructions"""
+    text = state["pdf_text"]
+    client = openai.OpenAI()
 
-
-@action(reads=[], writes=["llm_answer"])
-def answer_question(state: State, user_query: str) -> State:
-    return ...
-
-
-
-def build_graph() -> Graph:
-    return (
-        GraphBuilder()
-        .with_actions(
-            process_pdf,
-            store_document,
-            answer_question
-        )
-        .with_transitions(
-            ("process_pdf", "store_document"),
-            ("store_document", "answer_question"),
-        )
-        .build()
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": instructions},
+            {"role": "user", "content": text},
+        ],
     )
 
+    return state.update(llm_reply=response.choices[0].message.content)
 
 
 def build_assistant() -> Application:
-    graph = build_graph()
     return (
         ApplicationBuilder()
-        .with_graph(graph)
-        .with_identifiers(app_id="...")
-        .initialize_from(
-            initializer=LocalTrackingClient(project="ai-for-swes"),
-            resume_at_next_action=True,
-            default_entrypoint="next-action",
-            default_state={"conversation": []},
-        )
+        .with_actions(process_pdf, generate_email)
+        .with_transitions(("process_pdf", "generate_email"))
+        .with_entrypoint("process_pdf")
         .build()
     )
 
 
 if __name__ == "__main__":
-    assistant_graph = build_graph()
-    assistant_graph.visualize("assistant_v1.png", include_state=True)
-
+    app = build_assistant()
+    app.visualize("assistant_v1.png", include_state=True)
