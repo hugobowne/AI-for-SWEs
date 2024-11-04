@@ -1,16 +1,31 @@
 import openai
+import instructor
+
 from burr.core import action, ApplicationBuilder, Application, State
-from burr.integrations.opentelemetry import init_instruments
-from pydantic import BaseModel, create_model, Field
+from pydantic import BaseModel, Field
 from pypdf import PdfReader
 
 
-def _generate_model(fields: dict[str, dict]) -> type[BaseModel]:
-    field_mapping = {
-        name: (info["type"], Field(description=info["description"]))
-        for name, info in fields.items()
-    }
-    return create_model("ResponseFormat", **field_mapping)
+class LinkedInProfile(BaseModel):
+    """Extract metadata from a PDF export of a LinkedIn profile."""
+    name: str = Field(description="First name")
+    latest_role_title: str = Field(description="Job title of the most recent experience")
+    top_skills: list[str] = Field(description="Top job-related skills")
+    achievements: list[str] = Field(
+        description="Elements from the person's work experience that demonstrate skills and constitute significant achievements"
+    )
+
+
+EMAIL_TEMPLATE = """\
+Greetings {name},
+                                 
+I'm XYZ from company ABC. We're currently looking for a machine learning engineer. \
+Given your experience as a {latest_role_title} and your demonstrated skills in {top_skills}, \
+we thought you might be a good fit for our team!
+                                  
+If you're curious, feel free to pick a time in my calendar to chat. I'm eager to learn \
+more about your career and what you're looking for!
+"""
 
 
 @action(reads=[], writes=["pdf_text"])
@@ -21,53 +36,50 @@ def process_pdf(state: State, pdf_file_path: str) -> State:
     return state.update(pdf_text=text)
 
 
-@action(reads=["pdf_text"], writes=["llm_reply"])
-def generate_email(
-    state: State,
-    instructions: str,
-    response_format: type[BaseModel],
-    client: openai.OpenAI
-) -> State:
-    """Generate answer based on the PDF's text using an LLM following the instructions"""
+@action(reads=["pdf_text"], writes=["metadata", "email"])
+def generate_email(state: State, response_model: type[BaseModel], response_template: str) -> State:
     text = state["pdf_text"]
 
-    response = client.beta.chat.completions.parse(
+    client = instructor.from_openai(openai.OpenAI())
+    system_prompt = "Extract the relevant metadata from the content of this PDF file."
+    response = client.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": instructions},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": text},
         ],
-        response_format=response_format,
+        response_model=response_model,
     )
-    
-    message = response.choices[0].message
-    if message.parsed:
-        print("ACCEPTED")
-        new_state = state.update(llm_reply=message.parsed)
-    else:
-        print("REFUSED")
-        new_state = state.update(llm_reply=message.refusal)
 
-    return new_state
+    # `response` is an instance of `response_model`
+    email = response_template.format(
+        name=response.name,
+        latest_role_title=response.latest_role_title,
+        top_skills="; ".join(response.top_skills),
+    )
+
+    return state.update(metadata=response, email=email)
 
 
-def build_assistant() -> Application:
-    client = openai.OpenAI()
-    init_instruments("openai")
-
+def build_assistant(app_id: str) -> Application:
     return (
         ApplicationBuilder()
         .with_actions(
             process_pdf,
-            generate_email.bind(client=client)
+            # We bind the response model instead of hardcoding it
+            generate_email.bind(response_model=LinkedInProfile),
         )
         .with_transitions(("process_pdf", "generate_email"))
         .with_entrypoint("process_pdf")
+        .with_identifiers(app_id=app_id)
         .with_tracker(project="email-assistant-v2", use_otel_tracing=True)
         .build()
     )
 
 
 if __name__ == "__main__":
-    app = build_assistant()
+    from opentelemetry.instrumentation.openai import OpenAIInstrumentor
+    OpenAIInstrumentor().instrument()
+
+    app = build_assistant(app_id="test-app")
     app.visualize("assistant_v2.png", include_state=True)
