@@ -67,7 +67,10 @@ def build_assistant(app_id: str) -> Application:
         .with_actions(
             process_pdf,
             # We bind the response model instead of hardcoding it
-            generate_email.bind(response_model=LinkedInProfile),
+            generate_email.bind(
+                response_model=LinkedInProfile,
+                response_template=EMAIL_TEMPLATE,
+            ),
         )
         .with_transitions(("process_pdf", "generate_email"))
         .with_entrypoint("process_pdf")
