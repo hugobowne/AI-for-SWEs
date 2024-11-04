@@ -28,16 +28,21 @@ def generate_email(state: State, instructions: str) -> State:
     return state.update(llm_reply=response.choices[0].message.content)
 
 
-def build_assistant() -> Application:
+def build_assistant(app_id: str) -> Application:
     return (
         ApplicationBuilder()
         .with_actions(process_pdf, generate_email)
         .with_transitions(("process_pdf", "generate_email"))
         .with_entrypoint("process_pdf")
+        .with_identifiers(app_id=app_id)
+        .with_tracker(project="email-assistant-v1", use_otel_tracing=True)
         .build()
     )
 
 
 if __name__ == "__main__":
-    app = build_assistant()
+    from opentelemetry.instrumentation.openai import OpenAIInstrumentor
+    OpenAIInstrumentor().instrument()
+
+    app = build_assistant(app_id="test-app")
     app.visualize("assistant_v1.png", include_state=True)
