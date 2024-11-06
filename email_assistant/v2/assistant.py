@@ -16,6 +16,7 @@ class LinkedInProfile(BaseModel):
     )
 
 
+# note that we expect the email template fields to match the LinkedInProfile fields
 EMAIL_TEMPLATE = """\
 Greetings {name},
                                  
@@ -41,11 +42,10 @@ def generate_email(state: State, response_model: type[BaseModel], response_templ
     text = state["pdf_text"]
 
     client = instructor.from_openai(openai.OpenAI())
-    system_prompt = "Extract the relevant metadata from the content of this PDF file."
     response = client.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": "Extract the relevant metadata from the content of this PDF file."},
             {"role": "user", "content": text},
         ],
         response_model=response_model,
@@ -66,7 +66,7 @@ def build_assistant(app_id: str) -> Application:
         ApplicationBuilder()
         .with_actions(
             process_pdf,
-            # We bind the response model instead of hardcoding it
+            # We bind the response model and email template instead of hardcoding them
             generate_email.bind(
                 response_model=LinkedInProfile,
                 response_template=EMAIL_TEMPLATE,
