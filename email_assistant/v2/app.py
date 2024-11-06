@@ -1,5 +1,6 @@
 import pathlib
 import re
+import uuid
 
 import gradio as gr
 from assistant import build_assistant
@@ -7,10 +8,11 @@ from assistant import build_assistant
 
 def _create_app_id(file_path: str) -> str:
     """Create a session ID based on the file path."""
-    return re.sub(r"[^a-zA-Z0-9]", "-", pathlib.Path(file_path).name)
+    safe_file_name = re.sub(r"[^a-zA-Z0-9]", "-", pathlib.Path(file_path).name)
+    return f"{safe_file_name[:20]}-{str(uuid.uuid4())[:8]}"
 
 
-def run_assistant(pdf_file: str) -> tuple[str, dict]:
+def run_assistant(pdf_file: str) -> tuple[str | None, dict]:
     """Run the assistant on the latest user message and current PDF file.
     This doesn't leverage the full conversation history.
     """
@@ -23,7 +25,8 @@ def run_assistant(pdf_file: str) -> tuple[str, dict]:
         reply = state["email"]
         metadata = state["metadata"].model_dump_json()
     else:
-        reply = "Please upload a PDF file to continue."
+        gr.Info("Please upload a PDF file to continue.")
+        reply = None
         metadata = {}
 
     return reply, metadata
@@ -32,12 +35,14 @@ def run_assistant(pdf_file: str) -> tuple[str, dict]:
 def build_ui() -> gr.Blocks:
     """Return a Gradio UI for the email assistant."""
     with gr.Blocks() as ui:
-        with gr.Row():
-            pdf_input = gr.File(label="PDF source", type="filepath", file_types=[".pdf"])  # Handle file
-            query_button = gr.Button("Generate", variant="primary")
+        pdf_input = gr.File(label="PDF source", type="filepath", file_types=[".pdf"])  # Handle file
+        query_button = gr.Button("Generate", variant="primary")
         
-        text_output = gr.Textbox(label="Email", max_lines=100, show_copy_button=True)
-        metadata_output = gr.JSON(label="Extracted metadata")
+        with gr.Row():
+            with gr.Column():
+                text_output = gr.Textbox(label="Email", max_lines=100, show_copy_button=True)
+            with gr.Column():
+                metadata_output = gr.JSON(label="Extracted metadata", max_height=800)
 
         query_button.click(run_assistant, [pdf_input], [text_output, metadata_output])
 
