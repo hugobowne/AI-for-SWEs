@@ -124,5 +124,8 @@ def build_ui() -> gr.Blocks:
 
 
 if __name__ == "__main__":
+    import os
+    os.environ['GRADIO_ANALYTICS_ENABLED'] = 'False'
+
     ui = build_ui()
     ui.launch(server_port=8111)

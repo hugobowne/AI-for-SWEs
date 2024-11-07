@@ -23,13 +23,13 @@ def run_assistant(pdf_file: str) -> tuple[str | None, dict]:
             inputs={"pdf_file_path": pdf_file}
         )
         reply = state["email"]
-        metadata = state["metadata"].model_dump_json()
+        user_data = state["user_data"].model_dump_json()
     else:
         gr.Info("Please upload a PDF file to continue.")
         reply = None
-        metadata = {}
+        user_data = {}
 
-    return reply, metadata
+    return reply, user_data
 
 
 def build_ui() -> gr.Blocks:
@@ -42,14 +42,17 @@ def build_ui() -> gr.Blocks:
             with gr.Column():
                 text_output = gr.Textbox(label="Email", max_lines=100, show_copy_button=True)
             with gr.Column():
-                metadata_output = gr.JSON(label="Extracted metadata", max_height=800)
+                user_data_output = gr.JSON(label="Extracted user_data", height=400)
 
-        query_button.click(run_assistant, [pdf_input], [text_output, metadata_output])
+        query_button.click(run_assistant, [pdf_input], [text_output, user_data_output])
 
     return ui
 
 
 if __name__ == "__main__":
+    import os
+    os.environ['GRADIO_ANALYTICS_ENABLED'] = 'False'
+
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
     OpenAIInstrumentor().instrument()
 

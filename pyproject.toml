@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "pdf-query"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
-authors = ["hugobowne <hugobowne@gmail.com>"]
+authors = ["hugobowne <hugobowne@gmail.com>",
+"Stefan Krawczyk <stefan@dagworks.io>",
+"Thierry Jean <thierry@dagworks.io>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

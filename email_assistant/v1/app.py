@@ -46,6 +46,9 @@ def build_ui() -> gr.Blocks:
 
 
 if __name__ == "__main__":
+    import os
+    os.environ['GRADIO_ANALYTICS_ENABLED'] = 'False'
+
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
     OpenAIInstrumentor().instrument()
 

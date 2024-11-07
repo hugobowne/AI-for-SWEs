@@ -15,6 +15,8 @@ class LinkedInProfile(BaseModel):
     achievements: list[str] = Field(
         description="Elements from the person's work experience that demonstrate skills and constitute significant achievements"
     )
+    # add more here, e.g.
+    # specializations: list[str] = Field(description="Field specializations that are clear from their work history. E.g. 'Machine Learning', 'Data Science', etc.")
 
 
 @action(reads=[], writes=["pdf_text"])

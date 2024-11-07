@@ -1,8 +1,3 @@
-import copy
-
-from IPython.display import Image, display
-from IPython.core.display import HTML
-import openai
 import os
 import gradio as gr
 from llama_index.core import VectorStoreIndex, Document
@@ -10,9 +5,6 @@ from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import pymupdf  # PyMuPDF
-import sqlite3
-from datetime import datetime
-import threading
 import uuid
 
 from burr.core import ApplicationBuilder, State, default, graph, when
@@ -92,7 +84,7 @@ def build_application(base_graph, conversation_id):
     from opentelemetry.instrumentation.ollama import OllamaInstrumentor
     OllamaInstrumentor().instrument()
 
-    tracker = LocalTrackingClient(project="ai-for-swes")
+    tracker = LocalTrackingClient(project="ai-for-swes-5-app-convo-burr")
     app = (
         ApplicationBuilder()
         .with_graph(base_graph)
