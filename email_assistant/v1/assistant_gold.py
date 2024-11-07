@@ -23,8 +23,8 @@ def generate_email(state: State, instructions: str) -> State:
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            # TODO: fill me in.
-            # i.e. set up system and user messages
+            {"role": "system", "content": instructions},
+            {"role": "user", "content": text},
         ],
     )
 

@@ -2,13 +2,11 @@ import pathlib
 import re
 import textwrap
 import uuid
-from os import system
 
 import gradio as gr
 from burr.core import Application
-from fsspec.registry import default
-
 from assistant import build_assistant
+# from assistant_gold import build_assistant
 
 
 def _create_app_id(file_path: str) -> str:
@@ -20,7 +18,7 @@ def _create_app_id(file_path: str) -> str:
 def run_assistant(assistant: Application,
                   pdf_file: str,
                   system_prompt: str | None,
-                  instructions: str | None) -> tuple[str | None, dict]:
+                  instructions: str | None) -> tuple[list[dict] | None, dict, Application]:
     instructions = "" if instructions is None else instructions
     system_prompt = "" if system_prompt is None else system_prompt
     if pdf_file:
@@ -32,7 +30,7 @@ def run_assistant(assistant: Application,
                     "system_prompt": system_prompt}
         )
         # reply = state["email"]
-        initial_history = state["chat_history"]
+        initial_history: list[dict] = state["chat_history"]
         metadata = state["user_data"].model_dump_json()
     else:
         gr.Info("Please upload a PDF file to continue.")
@@ -42,7 +40,7 @@ def run_assistant(assistant: Application,
 
     return initial_history, metadata, assistant
 
-def iterate_on_email(assistant: Application, feedback: str) -> tuple[str | None, dict]:
+def iterate_on_email(assistant: Application, feedback: str) -> tuple[list[dict], dict]:
     action_name, results, state = assistant.run(
         halt_before=["user_feedback"],
         inputs={"feedback": feedback}
@@ -71,10 +69,7 @@ def reset_state(assistant, pdf_input, system_prompt, initial_instructions, text_
 
 def build_ui() -> gr.Blocks:
     """Return a Gradio UI for the email assistant."""
-
-
     with gr.Blocks() as ui:
-        # reset_button = gr.Button("Reset app", variant="secondary")
         assistant = gr.State(None)
 
         with gr.Group():
@@ -111,12 +106,6 @@ def build_ui() -> gr.Blocks:
             [assistant, refine_box],
             outputs=[text_output]
         )
-
-        # reset_button.click(
-        #     reset_state,
-        #     [assistant, pdf_input, system_prompt, initial_instructions, text_output, metadata_output, refine_box],
-        #     [assistant, pdf_input, system_prompt, initial_instructions, text_output, metadata_output, refine_box]
-        # )
         
         text_output.change(lambda x: gr.update(visible=x is not None), initial_instructions, initial_instructions)
 

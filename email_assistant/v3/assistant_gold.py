@@ -36,7 +36,6 @@ def extract_user_data(
     structured_llm_client,
 ) -> State:
     text = state["pdf_text"]
-
     system_extraction_prompt = "Extract the relevant user data from the content of this PDF file."
     response = structured_llm_client.beta.chat.completions.parse(
         model="gpt-4o-mini",
@@ -62,14 +61,16 @@ def generate_email(state: State, system_prompt: str, instructions: str, llm_clie
         f"INSTRUCTIONS\n{instructions}"
     )
     chat_history = [
-        # TODO: add system and user messages
-    ]
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": prompt},
+        ]
     response = llm_client.chat.completions.create(
         model="gpt-4o-mini",
         messages=chat_history,
     )
     chat_history.append(
-        # TODO: add assistant message
+        {"role": response.choices[0].message.role,
+         "content": response.choices[0].message.content}
     )
     return state.update(email=response.choices[0].message.content, chat_history=chat_history)
 
@@ -77,7 +78,7 @@ def generate_email(state: State, system_prompt: str, instructions: str, llm_clie
 def user_feedback(state: State, feedback: str) -> State:
     chat_history = state["chat_history"]
     chat_history.append(
-        # TODO: fill me in - i.e. add user message to history
+        {"role": "user", "content": feedback}
     )
     return state.update(chat_history=chat_history)
 
@@ -91,9 +92,10 @@ def iterate_on_email(state: State, llm_client) -> State:
         messages=chat_history,
     )
     email = response.choices[0].message.content
-    chat_history.append(
-        # TODO: fill me in - i.e. add assistant message to history
-    )
+    chat_history.append({
+        "role": response.choices[0].message.role,
+        "content": response.choices[0].message.content
+    })
     return state.update(email=email, chat_history=chat_history)
 
 

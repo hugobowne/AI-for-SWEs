@@ -9,17 +9,23 @@ import pymupdf
 class LinkedInProfile(BaseModel):
     """Extract user data from a PDF export of a LinkedIn profile."""
     name: str = Field(description="First name")
-    # TODO: add more fields here to match requirements for template
+    latest_role_title: str = Field(description="Job title of the most recent experience")
+    top_skills: list[str] = Field(description="Top job-related skills")
+    achievements: list[str] = Field(
+        description="Elements from the person's work experience that demonstrate skills and constitute significant achievements"
+    )
+    # add more here, e.g.
+    # specializations: list[str] = Field(description="Field specializations that are clear from their work history. E.g. 'Machine Learning', 'Data Science', etc.")
 
 
 # note that we expect the email template fields to match the LinkedInProfile fields
 EMAIL_TEMPLATE = """\
 Greetings {name},
-
+                                 
 I'm XYZ from company ABC. We're currently looking for a machine learning engineer. \
 Given your experience as a {latest_role_title} and your demonstrated skills in {top_skills}, \
 we thought you might be a good fit for our team!
-
+                                  
 If you're curious, feel free to pick a time in my calendar to chat. I'm eager to learn \
 more about your career and what you're looking for!
 """
@@ -38,7 +44,7 @@ def process_pdf(state: State, pdf_file_path: str) -> State:
 
 @action(reads=["pdf_text"], writes=["user_data"])
 def extract_user_data(
-        state: State,
+    state: State,
 ) -> State:
     text = state["pdf_text"]
     system_prompt = "Extract the relevant data from the content of this PDF file."
@@ -86,7 +92,6 @@ def build_assistant(app_id: str) -> Application:
 
 if __name__ == "__main__":
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
-
     OpenAIInstrumentor().instrument()
 
     app = build_assistant(app_id="test-app")

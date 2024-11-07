@@ -4,6 +4,7 @@ import uuid
 
 import gradio as gr
 from assistant import build_assistant
+# from assistant_gold import build_assistant
 
 
 def _create_app_id(file_path: str) -> str:
@@ -12,7 +13,7 @@ def _create_app_id(file_path: str) -> str:
     return f"{safe_file_name[:20]}-{str(uuid.uuid4())[:8]}"
 
 
-def run_assistant(pdf_file: str) -> tuple[str | None, dict]:
+def run_pipeline(pdf_file: str) -> tuple[str | None, dict]:
     """Run the assistant on the latest user message and current PDF file.
     This doesn't leverage the full conversation history.
     """
@@ -37,14 +38,14 @@ def build_ui() -> gr.Blocks:
     with gr.Blocks() as ui:
         pdf_input = gr.File(label="PDF source", type="filepath", file_types=[".pdf"])  # Handle file
         query_button = gr.Button("Generate", variant="primary")
-        
+
         with gr.Row():
             with gr.Column():
                 text_output = gr.Textbox(label="Email", max_lines=100, show_copy_button=True)
             with gr.Column():
                 user_data_output = gr.JSON(label="Extracted user_data", height=400)
 
-        query_button.click(run_assistant, [pdf_input], [text_output, user_data_output])
+        query_button.click(run_pipeline, [pdf_input], [text_output, user_data_output])
 
     return ui
 
