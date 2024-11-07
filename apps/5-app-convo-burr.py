@@ -9,7 +9,7 @@ from llama_index.core import VectorStoreIndex, Document
 from llama_index.llms.ollama import Ollama
 from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 import sqlite3
 from datetime import datetime
 import threading
@@ -22,7 +22,7 @@ from burr.tracking import LocalTrackingClient
 
 # Function to extract text from the PDF
 def extract_text_from_pdf(pdf_file_bytes):
-    pdf_doc = fitz.open(stream=pdf_file_bytes, filetype="pdf")
+    pdf_doc = pymupdf.open(stream=pdf_file_bytes, filetype="pdf")
     text = ""
     for page_num in range(pdf_doc.page_count):
         page = pdf_doc.load_page(page_num)

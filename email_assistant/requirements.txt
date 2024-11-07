@@ -1,0 +1,7 @@
+burr[start,opentelemetry]
+gradio
+pymupdf
+opentelemetry-instrumentation-openai
+opentelemetry-instrumentation-ollama
+instructor
+jupyter

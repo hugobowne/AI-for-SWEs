@@ -1,10 +1,10 @@
-import textwrap
+# import textwrap
 import openai
-import instructor
+# import instructor
 
 from burr.core import action, ApplicationBuilder, Application, State
 from pydantic import BaseModel, Field
-from pypdf import PdfReader
+import pymupdf
 
 
 class LinkedInProfile(BaseModel):
@@ -20,61 +20,82 @@ class LinkedInProfile(BaseModel):
 @action(reads=[], writes=["pdf_text"])
 def process_pdf(state: State, pdf_file_path: str) -> State:
     """Extract text from a PDF and return it as a string."""
-    reader = PdfReader(pdf_file_path)
-    text = " ".join([page.extract_text() for page in reader.pages])
+    pdf_doc = pymupdf.open(filename=pdf_file_path, filetype="pdf")
+    text = ""
+    for page_num in range(pdf_doc.page_count):
+        page = pdf_doc.load_page(page_num)
+        text += page.get_text("text")
     return state.update(pdf_text=text)
 
 
-@action(reads=["pdf_text"], writes=["metadata"])
-def extract_metadata(
+@action(reads=["pdf_text"], writes=["user_data"])
+def extract_user_data(
     state: State,
     response_model: type[BaseModel],
-    instructor_client,
+    structured_llm_client,
 ) -> State:
     text = state["pdf_text"]
 
-    response = instructor_client.create(
+    response = structured_llm_client.beta.chat.completions.parse(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "Extract the relevant metadata from the content of this PDF file."},
+            {"role": "system", "content": "Extract the relevant user data from the content of this PDF file."},
             {"role": "user", "content": text},
         ],
-        response_model=response_model,
+        response_format=response_model,
     )
+    parsed_data = response.choices[0].message.parsed
+    return state.update(user_data=parsed_data)
 
-    return state.update(metadata=response)
 
-
-@action(reads=["metadata", "email"], writes=["email"])
-def generate_email(state: State, instructions: str, llm_client) -> State:
+@action(reads=["user_data"], writes=["email", "chat_history"])
+def generate_email(state: State, system_prompt: str, instructions: str, llm_client) -> State:
     """Review the generated email and return it."""
-    email = "" if state["email"] is None else state["email"]
-
-    system_prompt = textwrap.dedent(
-        """\
-        You are an office assistant responsible for professional communication and drafting emails.
-        Use the provided metadata and previous emails drafts to generate a new email that follows
-        the user's instructions.
-        """
-    )
 
     # this multiline expression results in a concatenated string (notice that it's not a tuple with `,`)
-    # here, we naively dump the metadata as a JSON string, which LLMs are decent at parsing
-    # we could build a string from the metadata for better readability
+    # here, we naively dump the user_data as a JSON string, which LLMs are decent at parsing
+    # we could build a string from the user_data for better readability
     prompt = (
-        f"PREVIOUS EMAIL\n{email}\n\n"
-        f"METADATA\n{state['metadata'].model_dump_json()}\n\n"
+        f"USER DATA\n{state['user_data'].model_dump_json()}\n\n"
         f"INSTRUCTIONS\n{instructions}"
     )
-
-    response = llm_client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
+    chat_history = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
-        ],
+        ]
+    response = llm_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=chat_history,
     )
-    return state.update(email=response.choices[0].message.content)
+    chat_history.append(
+        {"role": response.choices[0].message.role,
+         "content": response.choices[0].message.content}
+    )
+    return state.update(email=response.choices[0].message.content, chat_history=chat_history)
+
+@action(reads=["chat_history"], writes=["chat_history"])
+def user_feedback(state: State, feedback: str) -> State:
+    chat_history = state["chat_history"]
+    chat_history.append(
+        {"role": "user", "content": feedback}
+    )
+    return state.update(chat_history=chat_history)
+
+
+@action(reads=["user_data", "email", "chat_history"], writes=["email", "chat_history"])
+def iterate_on_email(state: State, llm_client) -> State:
+    """Review the generated email and return it."""
+    chat_history = state["chat_history"]
+    response = llm_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=chat_history,
+    )
+    email = response.choices[0].message.content
+    chat_history.append({
+        "role": response.choices[0].message.role,
+        "content": response.choices[0].message.content
+    })
+    return state.update(email=email, chat_history=chat_history)
 
 
 def build_assistant(app_id: str) -> Application:
@@ -82,26 +103,31 @@ def build_assistant(app_id: str) -> Application:
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
     OpenAIInstrumentor().instrument()
 
-    llm_client = openai.OpenAI()
-    instructor_client = instructor.from_openai(llm_client)
+    llm_client = openai.OpenAI() # swap this for ollama if needed
+    # instructor_client = instructor.from_openai(llm_client)
 
     return (
         ApplicationBuilder()
         .with_actions(
             process_pdf,
-            extract_metadata.bind(
+            extract_user_data.bind(
                 response_model=LinkedInProfile,
-                instructor_client=instructor_client,
+                structured_llm_client=llm_client,
             ),
             generate_email.bind(llm_client=llm_client),
+            user_feedback,
+            iterate_on_email.bind(llm_client=llm_client)
+
         )
         .with_transitions(
-            ("process_pdf", "extract_metadata"),
-            ("extract_metadata", "generate_email"),
-            ("generate_email", "generate_email"),
+            ("process_pdf", "extract_user_data"),
+            ("extract_user_data", "generate_email"),
+            ("generate_email", "user_feedback"),
+            ("user_feedback", "iterate_on_email"),
+            ("iterate_on_email", "user_feedback"),
         )
         .with_entrypoint("process_pdf")
-        .with_state(State({"email": None}))
+        .with_state(State({"email": None, "chat_history": []}))
         .with_identifiers(app_id=app_id)
         .with_tracker(project="email-assistant-v3", use_otel_tracing=True)
         .build()

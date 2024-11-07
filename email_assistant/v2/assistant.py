@@ -3,7 +3,7 @@ import instructor
 
 from burr.core import action, ApplicationBuilder, Application, State
 from pydantic import BaseModel, Field
-from pypdf import PdfReader
+import pymupdf
 
 
 class LinkedInProfile(BaseModel):
@@ -32,8 +32,11 @@ more about your career and what you're looking for!
 @action(reads=[], writes=["pdf_text"])
 def process_pdf(state: State, pdf_file_path: str) -> State:
     """Extract text from a PDF and return it as a string."""
-    reader = PdfReader(pdf_file_path)
-    text = " ".join([page.extract_text() for page in reader.pages])
+    pdf_doc = pymupdf.open(filename=pdf_file_path, filetype="pdf")
+    text = ""
+    for page_num in range(pdf_doc.page_count):
+        page = pdf_doc.load_page(page_num)
+        text += page.get_text("text")
     return state.update(pdf_text=text)
 
 
