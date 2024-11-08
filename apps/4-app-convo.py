@@ -40,7 +40,7 @@ def query_pdf(pdf, query, history, model_choice):
         elif model_choice == "OpenAI":
             # Use OpenAI's model and access the API key from the environment variable
             openai_api_key = os.getenv("OPENAI_API_KEY")
-            llm = OpenAI(api_key=openai_api_key, model="gpt-3.5-turbo")
+            llm = OpenAI(api_key=openai_api_key, model="gpt-4o-mini")
 
         # Process the PDF and set up the query engine
         index = process_pdf(pdf)
