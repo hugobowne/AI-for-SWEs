@@ -5,8 +5,8 @@ import uuid
 
 import gradio as gr
 from burr.core import Application
-from assistant import build_assistant
-# from assistant_gold import build_assistant
+# from assistant import build_assistant
+from assistant_gold import build_assistant
 
 
 def _create_app_id(file_path: str) -> str:

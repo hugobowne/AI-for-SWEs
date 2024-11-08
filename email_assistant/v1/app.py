@@ -3,8 +3,8 @@ import re
 import uuid
 
 import gradio as gr
-from assistant import build_assistant
-# from assistant_gold import build_assistant
+# from pipeline import build_pipeline
+from pipeline_gold import build_pipeline
 
 
 def _create_app_id(file_path: str) -> str:
@@ -18,7 +18,7 @@ def run_pipeline(pdf_file: str, query_input: str) -> str | None:
     This doesn't leverage the full conversation history.
     """
     if pdf_file:
-        assistant = build_assistant(app_id=_create_app_id(pdf_file))
+        assistant = build_pipeline(app_id=_create_app_id(pdf_file))
         action_name, results, state = assistant.run(
             halt_after=["generate_email"],
             inputs={"pdf_file_path": pdf_file, "instructions": query_input}

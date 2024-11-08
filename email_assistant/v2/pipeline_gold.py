@@ -9,7 +9,7 @@ import pymupdf
 class LinkedInProfile(BaseModel):
     """Extract user data from a PDF export of a LinkedIn profile."""
     name: str = Field(description="First name")
-    latest_role_title: str = Field(description="Job title of the most recent experience")
+    latest_role_title: str = Field(description="Job title of the most recent experience. Use common abbreviation where possible.")
     top_skills: list[str] = Field(description="Top job-related skills")
     achievements: list[str] = Field(
         description="Elements from the person's work experience that demonstrate skills and constitute significant achievements"
@@ -73,7 +73,7 @@ def generate_email(state: State) -> State:
     return state.update(user_data=li_profile, email=email)
 
 
-def build_assistant(app_id: str) -> Application:
+def build_pipeline(app_id: str) -> Application:
     return (
         ApplicationBuilder()
         .with_actions(
@@ -94,5 +94,5 @@ if __name__ == "__main__":
     from opentelemetry.instrumentation.openai import OpenAIInstrumentor
     OpenAIInstrumentor().instrument()
 
-    app = build_assistant(app_id="test-app")
+    app = build_pipeline(app_id="test-app")
     app.visualize("assistant_v2.png", include_state=True)

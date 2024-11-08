@@ -5,3 +5,5 @@ opentelemetry-instrumentation-openai
 opentelemetry-instrumentation-ollama
 # instructor # note this has some conflicts with llama index.
 # jupyter # required for notebook to run
+pydantic
+pytest

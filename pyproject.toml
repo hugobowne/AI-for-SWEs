@@ -20,6 +20,8 @@ torch = "2.2.2"
 burr = {extras = ["opentelemetry", "start"], version = "^0.32.0"}
 opentelemetry-instrumentation-openai = "^0.33.3"
 opentelemetry-instrumentation-ollama = "^0.33.3"
+pytest = "^8.3.3"
+pydantic = "^2.9.2"
 
 [build-system]
 requires = ["poetry-core"]
