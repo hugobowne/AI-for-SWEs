@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pdf-query"
+name = "email-assistant"
 version = "0.2.0"
 description = ""
 authors = ["hugobowne <hugobowne@gmail.com>",
