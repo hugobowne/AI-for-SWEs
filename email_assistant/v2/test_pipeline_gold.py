@@ -41,3 +41,16 @@ Standardizing how people write python for data, machine learning, and LLM pipeli
 
 # Advanced:
 # use pytest fixtures
+# requires pytest-harvest plugin
+def test_my_agent(results_bag):
+    results_bag.input = "my_value"
+    results_bag.output = "my_output"
+    results_bag.expected_output = "my_expected_output"
+
+def test_print_results(module_results_df):
+    # place this function at the end of the module so that way it's run last.
+    print(module_results_df.columns) # this will include "input", "output", "expected_output"
+    print(module_results_df.head()) # this will show the first few rows of the results
+    # TODO: Add more evaluation logic here or log the results to a file, etc.
+    # assert some threshold of success, etc.
+    module_results_df.to_csv("./test_results.csv")

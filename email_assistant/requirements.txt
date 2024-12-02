@@ -7,3 +7,4 @@ opentelemetry-instrumentation-ollama
 # jupyter # required for notebook to run
 pydantic
 pytest
+pytest-harvest
