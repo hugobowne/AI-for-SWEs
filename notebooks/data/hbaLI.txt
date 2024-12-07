@@ -1,0 +1,332 @@
+
+0 notifications total
+
+Home
+My Network
+Jobs
+Messaging
+Notifications
+
+    Advertise
+
+Hugo Bowne-Anderson
+
+Background Image
+Hugo Bowne-Anderson
+Add verification badge
+Data and AI scientist, consultant. writer, educator, machine learner, podcaster.
+
+Darlinghurst, New South Wales, Australia Contact info
+
+    18,762 followers
+    500+ connections
+
+AnalyticsAnalytics
+
+ Private to you
+
+ Private to you
+
+2,337 profile views2,337 profile views
+Discover who's viewed your profile.Discover who's viewed your profile.
+12,817 post impressions12,817 post impressions
+Check out who's engaging with your posts.Check out who's engaging with your posts. Past 7 daysPast 7 days
+
+    283 search appearances283 search appearances
+    See how often you appear in search results.See how often you appear in search results.
+
+Show all analytics
+AboutAbout
+I'm an independent data and AI scientist, consultant, writer, educator & podcaster. My interests include promoting data & AI literacy/fluency, helping to spread data skills through organizations and society and lowering the barrier to entry for data science, analysis, and machine learning. Previously, I was Head of Developer Relations at Outerbounds, a company committed to building infrastructure that provides a solid foundation for machine learning applications of all shapes and sizes. I am also the host of the industry podcast Vanishing Gradients. I was previously Head of Marketing and Data Science Evangelism at Coiled, building solutions for scalable data science and machine learning in Python. Before this, I was at DataCamp, a data science training company educating over 4 million learners worldwide through interactive courses on the use of Python, R, SQL, Git, Bash and Spreadsheets in a data science context. While there, I spearheaded the development of over 25 courses in DataCamp’s Python curriculum, impacting over 250,000 learners worldwide through my own courses. I hosted and produced the data science podcast DataFramed, in which I used long-format interviews with working data scientists to delve into what actually happens in the space and what impact it can and does have.I'm an independent data and AI scientist, consultant, writer, educator & podcaster. My interests include promoting data & AI literacy/fluency, helping to spread data skills through organizations and society and lowering the barrier to entry for data science, analysis, and machine learning. Previously, I was Head of Developer Relations at Outerbounds, a company committed to building infrastructure that provides a solid foundation for machine learning applications of all shapes and sizes. I am also the host of the industry podcast Vanishing Gradients. I was previously Head of Marketing and Data Science Evangelism at Coiled, building solutions for scalable data science and machine learning in Python. Before this, I was at DataCamp, a data science training company educating over 4 million learners worldwide through interactive courses on the use of Python, R, SQL, Git, Bash and Spreadsheets in a data science context. While there, I spearheaded the development of over 25 courses in DataCamp’s Python curriculum, impacting over 250,000 learners worldwide through my own courses. I hosted and produced the data science podcast DataFramed, in which I used long-format interviews with working data scientists to delve into what actually happens in the space and what impact it can and does have.
+FeaturedFeatured
+
+    PostPost
+    🍿 While touring Europe, I want to chat with as many interesting people as possible and bring them to you. First up, meet Utkarsh Kashyap:
+
+    * UK is a software engineer at Outerbounds working on ML/AI infrastructure tools for data scientists and ML/AI engineers 💻 
+    * He loves building tools that delight users and enjoys the deep technical challenges that result here 💅 
+    * He's excited about all the current challenges faced on the infra side by running and deploying LLMs and other foundational models 🤟 
+    * Utkarsh also recently got married so many congrats to him and his wife! 💫 
+
+    If you're at KubeCon EU this week, come say hi at Booth J26 and we can even record a short chat if you'd like! 📺 
+
+PostPost
+🇫🇷 Help us find the cat we’ve lost in Paris. Bring any leads to Outerbounds Booth J26 at KubeCon EU. Details in video 🐈 👇🏻
+
+PostPost
+🍿 I just caught up with Phillip Carter, Principal PM at honeycomb.io, at KubeCon EU in Paris 🥐 , who
+
+* as Honeycomb's unofficial AI lead, was ONE OF THE FIRST PEOPLE TO PUT LLMS IN PRODUCTION 🤯 (outside of the big AI labs)! 🤓 
+* loves solving problems that customers really care about and which there isn't such a playbook for; 💫 
+* is excited about the possible futures of AI agents, with how good the models are getting, along with composability of models 🤖 
+
+If you're at KubeCon EU or in Paris, London, Berlin, or Amsterdam (among other places in Europe) and want to chat, let me know! 📺
+
+PostPost
+🍿 I had the great pleasure of chatting with Gael Varoquaux, a co-founder/OG core dev of scikit-learn 😎 . Gaël
+
+* Started scikit-learn, is a scientist at Inria, and is helping to spin out :probabl.! 🎲 
+* Loves using science and software to contribute to the world in a good way, building tools that help others build technology and do science 😍 
+* Is excited about better models for survival analysis and their applications in healthcare! 🏥 
+* Is also excited about foundation models but concerned about the "bigger is better" worldview and its impact on climate change. 👀 
+
+Gaël is a true legend to me and, although we've interacted over the years, we'd never met IRL, and it was such a pleasure! 🤩 
+
+PostPost
+scikit-learn is one of the most boring hashtag#machinelearning packages.
+
+Let me tell you why while standing by the banks of the Seine eating a croissant 🥐 👇🏻
+
+Also join our mixer with our scikit-learn friends at :probabl. tonight!
+
+https://lu.ma/MLinParis
+
+ActivityActivity
+
+18,762 followers18,762 followers
+Create a post
+Loaded 3 Posts posts
+
+    Hugo Bowne-Anderson posted this • 21h21h
+    🎓 Learn to Test and Improve Your LLM Applications 🤖 LLM-powered apps are everywhere, but building reliable ones? That’s still a challenge. If you’ve ever wondered how to systematically test, evaluate, and improve your generative AI applications, this free 30-minute Lightning Lesson is for you. I’ll be teaching this session alongside Stefan Krawczyk, co-founder of DAGWorks and an expert in building robust ML systems. Together, we’ll cover practical strategies to help you confidently test and refine your LLM apps. 📅 When: Monday, December 16, 2024 ⏰ Time: 7:00 PM EST 📍 Where: Virtual (Zoom) 💡 What You’ll Learn: • How to write pytest cases to test LLM outputs. • Building a framework for iterative improvement. • Techniques to evaluate outputs and improve stability. ✅ Register here: https://lnkd.in/gz3-2haV Let’s move beyond demoware and start building applications that work in production 🚀 , Mastering LLM Application Testing, maven.com
+    🎓 Learn to Test and Improve Your LLM Applications 🤖 
+
+    LLM-powered apps are everywhere, but building reliable ones? That’s still a challenge. If you’ve ever wondered how to systematically test, evaluate, and improve your generative AI applications, this free 30-minute Lightning Lesson is for you.
+
+    I’ll be teaching this session alongside Stefan Krawczyk, co-founder of DAGWorks and an expert in building robust ML systems. Together, we’ll cover practical strategies to help you confidently test and refine your LLM apps.
+
+    📅 When: Monday, December 16, 2024
+    ⏰ Time: 7:00 PM EST
+    📍 Where: Virtual (Zoom)
+    💡 What You’ll Learn:
+     • How to write pytest cases to test LLM outputs.
+     • Building a framework for iterative improvement.
+     • Techniques to evaluate outputs and improve stability.
+
+    ✅ Register here: https://lnkd.in/gz3-2haV
+    Let’s move beyond demoware and start building applications that work in production 🚀 
+    Mastering LLM Application Testing
+    maven.com
+    Hugo Bowne-Anderson posted this • 1d1d
+    💡 How should leaders manage the pressures of adopting AI? In this clip from my conversation with Hilary Mason, we discuss the tough questions leaders face—from “What’s your AI strategy?” to hype around AGI—and how to respond with clarity, collaboration, and pragmatism. Hilary shares: 🔹 Why asking the right questions helps align expectations. 🔹 How AI can deliver real business value without overpromising. 🔹 The importance of understanding your data’s unique strengths. 🎬 Watch the clip to hear Hilary’s insights on how leaders can cut through the noise and focus on what really matters. For more, catch the full episode here: • Apple: https://lnkd.in/gVC73DxC • Spotify: https://lnkd.in/geUtFDfp • YouTube: https://lnkd.in/guD5zdHs • More episodes and show notes: https://lnkd.in/gDjQvqAw
+    💡 How should leaders manage the pressures of adopting AI?
+
+    In this clip from my conversation with Hilary Mason, we discuss the tough questions leaders face—from “What’s your AI strategy?” to hype around AGI—and how to respond with clarity, collaboration, and pragmatism.
+
+    Hilary shares:
+    🔹 Why asking the right questions helps align expectations.
+    🔹 How AI can deliver real business value without overpromising.
+    🔹 The importance of understanding your data’s unique strengths.
+
+    🎬 Watch the clip to hear Hilary’s insights on how leaders can cut through the noise and focus on what really matters.
+
+    For more, catch the full episode here:
+    • Apple: https://lnkd.in/gVC73DxC
+    • Spotify: https://lnkd.in/geUtFDfp
+    • YouTube: https://lnkd.in/guD5zdHs
+    • More episodes and show notes: https://lnkd.in/gDjQvqAw
+    Hugo Bowne-Anderson posted this • 2d2d
+    ❓ Is Data Science Dead in the Age of AI ❓ In our latest High Signal episode, Hilary Mason shares why the answer is a resounding “No!”—but the field is undergoing profound changes. Automation is transforming workflows, generative AI is reshaping how problems are solved, and the community is moving beyond its “shiny” phase into something more mature. 💡 Fun fact: Hilary was my guest on the first podcast I ever released, nearly a decade ago. It’s amazing to see how much has changed—and how much has stayed the same. Key themes we covered: ✨ From Hype to Maturity Automation is redefining entry-level roles and workflows. What does this mean for the future of data science? 📜 Why Generative AI Needs Context, Not Prompts “Prompting feels like spellcasting, not engineering,” Hilary says. She explains how context-rich systems—like structured data and multimodal inputs—are the key to unlocking AI’s potential. ⏳ A Decade of Interfaces, Not Algorithms Even if machine learning progress stopped today, it would take years to design the workflows, tools, and interfaces needed to fully harness its power. 🎧 This episode, produced by Delphina with Duncan Gilchrist, dives deep into the evolving landscape of data science and what it takes to thrive in an AI-driven world. Catch the full episode wherever you listen to podcasts, and share your thoughts: • Apple: https://lnkd.in/gVC73DxC • Spotify: https://lnkd.in/geUtFDfp • YouTube: https://lnkd.in/gZw-QQWj • More episodes and show notes: https://lnkd.in/gDjQvqAw
+    ❓ Is Data Science Dead in the Age of AI ❓
+
+    In our latest High Signal episode, Hilary Mason shares why the answer is a resounding “No!”—but the field is undergoing profound changes. Automation is transforming workflows, generative AI is reshaping how problems are solved, and the community is moving beyond its “shiny” phase into something more mature.
+
+    💡 Fun fact: Hilary was my guest on the first podcast I ever released, nearly a decade ago. It’s amazing to see how much has changed—and how much has stayed the same.
+
+    Key themes we covered:
+
+    ✨ From Hype to Maturity
+    Automation is redefining entry-level roles and workflows. What does this mean for the future of data science?
+
+    📜 Why Generative AI Needs Context, Not Prompts
+    “Prompting feels like spellcasting, not engineering,” Hilary says. She explains how context-rich systems—like structured data and multimodal inputs—are the key to unlocking AI’s potential.
+
+    ⏳ A Decade of Interfaces, Not Algorithms
+    Even if machine learning progress stopped today, it would take years to design the workflows, tools, and interfaces needed to fully harness its power.
+
+    🎧 This episode, produced by Delphina with Duncan Gilchrist, dives deep into the evolving landscape of data science and what it takes to thrive in an AI-driven world.
+
+    Catch the full episode wherever you listen to podcasts, and share your thoughts:
+    • Apple: https://lnkd.in/gVC73DxC
+    • Spotify: https://lnkd.in/geUtFDfp
+    • YouTube: https://lnkd.in/gZw-QQWj
+    • More episodes and show notes: https://lnkd.in/gDjQvqAw
+
+Show all posts
+ExperienceExperience
+
+    Independent Data and AI ScientistIndependent Data and AI Scientist
+    FreelanceFreelance Jul 2024 - Present · 6 mosJul 2024 to Present · 6 mos
+            Artificial Intelligence (AI), Data Science and +3 skills
+    Outerbounds logo
+    Head of Developer RelationsHead of Developer Relations
+    Outerbounds · Full-timeOuterbounds · Full-time Feb 2022 - Aug 2024 · 2 yrs 7 mosFeb 2022 to Aug 2024 · 2 yrs 7 mos
+    Coiled logo
+    Head of Data Science Evangelism and MarketingHead of Data Science Evangelism and Marketing
+    Coiled · Self-employedCoiled · Self-employed May 2020 - Oct 2021 · 1 yr 6 mosMay 2020 to Oct 2021 · 1 yr 6 mos
+    DataCampDataCamp
+    4 yrs 3 mos4 yrs 3 mos
+        Data ScientistData Scientist
+        Sep 2017 - May 2020 · 2 yrs 9 mosSep 2017 to May 2020 · 2 yrs 9 mos
+        Curriculum Engineer (Python)Curriculum Engineer (Python)
+        Mar 2016 - May 2020 · 4 yrs 3 mosMar 2016 to May 2020 · 4 yrs 3 mos Greater New York City AreaGreater New York City Area
+                DataCamp is a Boston-based startup that provides online, interactive training in data science. Founded in 2013, the company participated in TechStars NYC during the spring of 2015, received their first round of VC funding soon after, and now has over 350,000 registered users worldwide.
+
+                At DataCamp, I am responsible for building out the Python curriculum. This involves everything from mapping out long-term curriculum goals to devising courses to (the best part!) working with state-of-the-art instructors from academia, industry and development to build interactive data science courses. We provide instructors the opportunity to significantly expand their reach, influence, and impact, while also supplementing their income through our generous revenue sharing program.
+
+                For more reasons why you should consider working with us, see datacamp.com/createDataCamp is a Boston-based startup that provides online, interactive training in data science. Founded in 2013, the company participated in TechStars NYC during the spring of 2015, received their first round of VC funding soon after, and now has over 350,000 registered users worldwide. At DataCamp, I am responsible for building out the Python curriculum. This involves everything from mapping out long-term curriculum goals to devising courses to (the best part!) working with state-of-the-art instructors from academia, industry and development to build interactive data science courses. We provide instructors the opportunity to significantly expand their reach, influence, and impact, while also supplementing their income through our generous revenue sharing program. For more reasons why you should consider working with us, see datacamp.com/create
+    Yale University logo
+    Postdoctoral Associate/WriterPostdoctoral Associate/Writer
+    Yale UniversityYale University 2013 - Mar 2016 · 3 yrs 3 mos2013 to Mar 2016 · 3 yrs 3 mos
+            --Developing statistical models for the growth and structure of neurons, in collaboration with experimentalists (we use the Class IV sensory neuron in Drosophila larvae as a model system). Daily tasks include constructing master equations, developing analytical solutions and performing simulations via numerical integration and Monte Carlo methods, along with devising probability models, implementing statistical tests and analyzing large amounts of data. 
+            -- Developing quantification methods for gene-expresssion and alternative splicing across a variety of organisms. To do so, we mine publicly available RNA-seq datasets (>10^6 data points), develop statistical models, utilize statistical hypothesis tests and implement both supervised and unsupervised learning models on big data.--Developing statistical models for the growth and structure of neurons, in collaboration with experimentalists (we use the Class IV sensory neuron in Drosophila larvae as a model system). Daily tasks include constructing master equations, developing analytical solutions and performing simulations via numerical integration and Monte Carlo methods, along with devising probability models, implementing statistical tests and analyzing large amounts of data. -- Developing quantification methods for gene-expresssion and alternative splicing across a variety of organisms. To do so, we mine publicly available RNA-seq datasets (>10^6 data points), develop statistical models, utilize statistical hypothesis tests and implement both supervised and unsupervised learning models on big data.
+
+Show all 7 experiences
+EducationEducation
+
+    UNSW logo
+    UNSWUNSW
+    Doctor of Philosophy (PhD), Pure MathematicsDoctor of Philosophy (PhD), Pure Mathematics 2006 - 20112006 - 2011
+    University of Sydney logo
+    University of SydneyUniversity of Sydney
+    Bachelor of Science (B.S.) (First Class Honors), Mathematics, English LiteratureBachelor of Science (B.S.) (First Class Honors), Mathematics, English Literature 2001 - 20052001 - 2005
+
+Licenses & certificationsLicenses & certifications
+
+    Coursera logo
+    Introduction to Data Science (with distinction)Introduction to Data Science (with distinction)
+    CourseraCoursera Issued Jun 2014 · Expired Sep 2014Issued Jun 2014 · Expired Sep 2014
+        Show credential
+    edX logo
+    Introduction to Computer Science and Programming (MITx)Introduction to Computer Science and Programming (MITx)
+    edXedX Issued Oct 2013 · Expired Jan 2014Issued Oct 2013 · Expired Jan 2014
+        Show credential
+
+Show all 7 licenses & certifications
+SkillsSkills
+
+    Artificial Intelligence (AI)Artificial Intelligence (AI)
+        Independent Data and AI Scientist (Freelance)Independent Data and AI Scientist (Freelance)
+    Data ScienceData Science
+        Independent Data and AI Scientist (Freelance)Independent Data and AI Scientist (Freelance)
+
+Show all 30 skills
+RecommendationsRecommendations
+Show all pending
+
+    Richard Savel, MD, MBA, FCCM profile picture
+    Richard Savel, MD, MBA, FCCMRichard Savel, MD, MBA, FCCM
+    · 1stFirst degree connection
+    Chair, Department of Medicine, Jersey City Medical CenterChair, Department of Medicine, Jersey City Medical Center December 1, 2024, Richard was Hugo’s clientDecember 1, 2024, Richard was Hugo’s client
+            Hugo is amazing. I am a physician in NYC who is trying to learn more about DataScience. Hugo was my professor for DataScience as part of DataCamp. He is so incredibly articulate and passionate about Python. He made me feel like a true “pythonista”. I can’t say enough great things about him. He is obviously incredibly intelligent and has such deep knowledge of DataScience but also really helps the new student. I end my comment as I began: Hugo is simply amazing. Hugo is amazing. I am a physician in NYC who is trying to learn more about DataScience. Hugo was my professor for DataScience as part of DataCamp. He is so incredibly articulate and passionate about Python. He made me feel like a true “pythonista”. I can’t say enough great things about him. He is obviously incredibly intelligent and has such deep knowledge of DataScience but also really helps the new student. I end my comment as I began: Hugo is simply amazing. 
+    Hadrien Lacroix profile picture
+    Hadrien LacroixHadrien Lacroix
+    · 1stFirst degree connection
+    Data ScientistData Scientist May 27, 2020, Hadrien worked with Hugo but on different teamsMay 27, 2020, Hadrien worked with Hugo but on different teams
+            Hugo is one of these people I'm honored, thankful and humbled our paths crossed. I'm going to skip over Hugo's technical skills, not because they are not impressive (quite the contrary), but because they are the most obvious one. Hugo has an impressive education and a breathtaking academic background, and he's an incredibly skilled and renowned data scientist.
+
+            At DataCamp, after designing our Python curriculum (that, at the date I'm writing, counts more than 130 courses and 40 projects), he applied his expertise as a data scientist and then created the DataFramed podcast, engaging in weekly conversations with major actors of the field (Cathy O'Neil, Wes McKinney), from leading organizations (AT&T, McKinsey), to thoroughly tackle questions around central topics (critical thinking, organizing teams, election forecasting) and tools (Jupyter, pandas). This podcast became one of, if not the leading podcast in data science, counting 60 episodes with an average of 4.9/5 on iTunes based on about 200 ratings.
+
+            But all of this is public information. What is less known about Hugo is that his soft skills are just as, if not more, impressive as his hard skills. After doing research at some of the best academic organizations in the world (Yale, Max Planck Institute), he had a myriad of opportunities in front of him, that some of us could only dream of. Still, he chose to take a bet on a small startup, fresh out of Tech Stars 2015, coming in as employee #7. This company would end up raising more than $30 millions, hiring more than 100 collaborators, and becoming one of the leading names in data science education.
+
+            Hugo hired the company's first Content Developer (Yashas Roy), who would end up leading the Content team, taking a bet on me, and being the best manager I ever had. When I was hired, I had been contracting as a support agent for 9 months: I was just creating issues on GitHub. The first time I met Hugo, he not only knew who I was but also how I had contributed so far, despite us never being in contact. Hugo was a driving force at DataCamp. His dedication, vision, hard work, intelligence and joyfulness have made it a delight to work alongside him. He has always acted as an advocate for the students and his colleagues, asking the hard questions and taking ownership of the solutions. It's been humbling and empowering to share a part of his journey. He will be dearly missed, but I'm very excited about what he will achieve next.
+
+            When he left, Hugo confessed that, coming from an academic background, he originally had some doubts about his ability to deliver in the business world. Having gone through several business and management schools, I can without hesitation state that getting business students to come out of their school with half the vision, leadership, management, problem solving, productivity and team work skills (to name a few) that Hugo demonstrated would already be an incredible achievement.Hugo is one of these people I'm honored, thankful and humbled our paths crossed. I'm going to skip over Hugo's technical skills, not because they are not impressive (quite the contrary), but because they are the most obvious one. Hugo has an impressive education and a breathtaking academic background, and he's an incredibly skilled and renowned data scientist. At DataCamp, after designing our Python curriculum (that, at the date I'm writing, counts more than 130 courses and 40 projects), he applied his expertise as a data scientist and then created the DataFramed podcast, engaging in weekly conversations with major actors of the field (Cathy O'Neil, Wes McKinney), from leading organizations (AT&T, McKinsey), to thoroughly tackle questions around central topics (critical thinking, organizing teams, election forecasting) and tools (Jupyter, pandas). This podcast became one of, if not the leading podcast in data science, counting 60 episodes with an average of 4.9/5 on iTunes based on about 200 ratings. But all of this is public information. What is less known about Hugo is that his soft skills are just as, if not more, impressive as his hard skills. After doing research at some of the best academic organizations in the world (Yale, Max Planck Institute), he had a myriad of opportunities in front of him, that some of us could only dream of. Still, he chose to take a bet on a small startup, fresh out of Tech Stars 2015, coming in as employee #7. This company would end up raising more than $30 millions, hiring more than 100 collaborators, and becoming one of the leading names in data science education. Hugo hired the company's first Content Developer (Yashas Roy), who would end up leading the Content team, taking a bet on me, and being the best manager I ever had. When I was hired, I had been contracting as a support agent for 9 months: I was just creating issues on GitHub. The first time I met Hugo, he not only knew who I was but also how I had contributed so far, despite us never being in contact. Hugo was a driving force at DataCamp. His dedication, vision, hard work, intelligence and joyfulness have made it a delight to work alongside him. He has always acted as an advocate for the students and his colleagues, asking the hard questions and taking ownership of the solutions. It's been humbling and empowering to share a part of his journey. He will be dearly missed, but I'm very excited about what he will achieve next. When he left, Hugo confessed that, coming from an academic background, he originally had some doubts about his ability to deliver in the business world. Having gone through several business and management schools, I can without hesitation state that getting business students to come out of their school with half the vision, leadership, management, problem solving, productivity and team work skills (to name a few) that Hugo demonstrated would already be an incredible achievement.
+
+LanguagesLanguages
+
+    FrenchFrench
+    Elementary proficiencyElementary proficiency
+
+InterestsInterests
+
+    Ethan Mollick profile picture
+    Ethan MollickEthan Mollick
+    · 2ndSecond degree connection
+    Associate Professor at The Wharton School. Author of Co-IntelligenceAssociate Professor at The Wharton School. Author of Co-Intelligence 197,146 followers197,146 followers
+    DJ Patil profile picture
+    DJ PatilDJ Patil
+    · 1stFirst degree connection
+    Investor, entrepreneur, public policy, former U.S Chief Data ScientistInvestor, entrepreneur, public policy, former U.S Chief Data Scientist 744,589 followers744,589 followers
+
+Show all Top Voices
+Profile language
+
+English
+Public profile & URL
+
+www.linkedin.com/in/hugo-bowne-anderson-045939a5
+More profiles for youMore profiles for you
+
+    Maggie Matsui profile picture
+    Maggie MatsuiMaggie Matsui
+    · 1stFirst degree connection
+    Data Scientist @ EtsyData Scientist @ Etsy
+        Message
+    Meri Nova profile picture
+    Meri NovaMeri Nova
+    · 2ndSecond degree connection
+    ML/AI Engineer | Community Builder | Founder @Break Into Data | ADHD + C-PTSD advocateML/AI Engineer | Community Builder | Founder @Break Into Data | ADHD + C-PTSD advocate
+    Ville Tuulos profile picture
+    Ville TuulosVille Tuulos
+    · 1stFirst degree connection
+    CEO & Co-Founder at OuterboundsCEO & Co-Founder at Outerbounds
+        Message
+    Hadrien Lacroix profile picture
+    Hadrien LacroixHadrien Lacroix
+    · 1stFirst degree connection
+    Data ScientistData Scientist
+        Message
+    Utkarsh Kashyap profile picture
+    Utkarsh KashyapUtkarsh Kashyap
+    · 1stFirst degree connection
+    ML Infrastructure @ Outerbounds | MSCS, UPenn ML Infrastructure @ Outerbounds | MSCS, UPenn 
+        Message
+
+Show all
+Explore Premium profilesExplore Premium profiles
+
+    Yikai Yang profile picture
+    Yikai YangYikai Yang
+    · 2ndSecond degree connection
+    PhD | AI Engineer & Researcher | Investor Fellow | Entrepreneur at HeartPhD | AI Engineer & Researcher | Investor Fellow | Entrepreneur at Heart
+    Goce Ristanoski profile picture
+    Goce RistanoskiGoce Ristanoski
+    · 2ndSecond degree connection
+    Data Science Solutions and AnalyticsData Science Solutions and Analytics
+    Charles Shibu Christin profile picture
+    Charles Shibu ChristinCharles Shibu Christin
+    · 2ndSecond degree connection
+    CRISC | CISA | CISM | CGEIT | ISMS 27001:2022 LA | CHFI | CEH | CTIA | ECIH | CEI | CASP | CCIE Security | CCNP | CyberOps | Threat intelligence | Strategic Cyber solutions | GRCCRISC | CISA | CISM | CGEIT | ISMS 27001:2022 LA | CHFI | CEH | CTIA | ECIH | CEI | CASP | CCIE Security | CCNP | CyberOps | Threat intelligence | Strategic Cyber solutions | GRC
+    Érica Lélis Diall profile picture
+    Érica Lélis DiallÉrica Lélis Diall
+    · 3rdThird degree connection
+    StudentStudent
+        View profile
+
+Try premium to stand outTry premium to stand out
+People you may knowPeople you may know
+
+From your schoolFrom your school
+
+    Alice Fenton profile picture
+    Alice FentonAlice Fenton
+    Storyteller ManagerStoryteller Manager
+    Simone Zanin profile picture
+    Simone ZaninSimone Zanin
+    Senior Data Scientist @ WooliesX | AI, MLOpsSenior Data Scientist @ WooliesX | AI, MLOps
+    Jocelyn Ho profile picture
+    Jocelyn HoJocelyn Ho
+    Steinway Artist, Music Theorist, Composer, Interdisciplinary Artist; Research Fellow at USydSteinway Artist, Music Theorist, Composer, Interdisciplinary Artist; Research Fellow at USyd
+    Rebekah Brown profile picture
+    Rebekah BrownRebekah Brown
+    Provost and Senior Vice-President @ANU | #RiseProgram | Global expert: #SustainableCities #WaterProvost and Senior Vice-President @ANU | #RiseProgram | Global expert: #SustainableCities #Water
+    JP Hwang profile picture
+    JP HwangJP Hwang
+    Technical Curriculum Developer @ Weaviate | Data science & tech education / developer advocacyTechnical Curriculum Developer @ Weaviate | Data science & tech education / developer advocacy
+
+Show all
+Hugo Bowne-Anderson
+Status is online
+Page inboxes
+8 8 new notifications

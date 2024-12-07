@@ -1,0 +1,386 @@
+
+0 notifications total
+
+Home
+My Network
+Jobs
+Messaging
+Notifications
+
+    Advertise
+
+Chip Huyen
+Chip Huyen
+Building something new | AI x storytelling
+
+Background Image
+Chip has a premium account
+Click to upgrade to Premium
+Chip Huyen
+1st degree connection 1st
+Building something new | AI x storytelling
+
+San Francisco, California, United States Contact info
+Designing ML Systems 
+
+    250,534 followers
+
+Fatma Tarlaci, Ph.D., Kirk Mettler, and 276 other mutual connectionsFatma Tarlaci, Ph.D., Kirk Mettler, and 276 other mutual connections
+
+HighlightsHighlights
+
+    Event logo
+    DataEngBytes Sydney 2024DataEngBytes Sydney 2024
+    Chip spoke at this event in Sydney, New South WalesChip spoke at this event in Sydney, New South Wales
+
+AboutAbout
+I'm Chip Huyen, a writer and computer scientist. I'm building infrastructure or real-time ML. I also teach Machine Learning Systems Design at Stanford.
+
+Previously, I was with Snorkel AI, NVIDIA, Netflix, Primer, Baomoi.com (acquired by VNG). I helped launch Coc Coc - Vietnam’s second most popular web browser with 20+ million monthly active users.
+
+In my free time, I travel and write. After high school, I went to Brunei for a 3-day vacation which turned into a 3-year trip through Asia, Africa, and South America. During my trip, I worked as a Bollywood extra, a casino hostess, and a street performer.
+
+I’m the author of four bestselling Vietnamese books. I’m working on an English book on machine learning interviews.I'm Chip Huyen, a writer and computer scientist. I'm building infrastructure or real-time ML. I also teach Machine Learning Systems Design at Stanford. Previously, I was with Snorkel AI, NVIDIA, Netflix, Primer, Baomoi.com (acquired by VNG). I helped launch Coc Coc - Vietnam’s second most popular web browser with 20+ million monthly active users. In my free time, I travel and write. After high school, I went to Brunei for a 3-day vacation which turned into a 3-year trip through Asia, Africa, and South America. During my trip, I worked as a Bollywood extra, a casino hostess, and a street performer. I’m the author of four bestselling Vietnamese books. I’m working on an English book on machine learning interviews.
+FeaturedFeatured
+
+    PostPost
+    OMG I'M SO HAPPY!!!
+
+    "Designing Machine Learning Systems" is finally out!
+
+    Thanks everyone who helped me make this happen 🙏 🎉
+
+    https://lnkd.in/gHX88w7F
+
+     hashtag#mlops hashtag#mlsys hashtag#mlengineer hashtag#dmls
+    The book Designing Machine Learning Systems is finally out!
+
+PostPost
+I’m excited to share that I’m working on a new book about building applications with foundation models. AI Engineering builds upon Machine Learning Systems Design, but with a focus on large scale, ready made models.
+
+The book covers:
+- The new AI stack (e.g. how it differs from traditional ML engineering)
+- Different approaches to evaluate open-ended systems
+- Dataset engineering
+- Prompt engineering, RAG, agents
+- Finetuning
+- Compute infrastructure, including how to mitigate latency and cost
+
+AI Engineering is scheduled for late 2024. An early draft of the first 3 chapters are available on the O'Reilly platform: https://lnkd.in/geh2x4Tw
+
+I’ve learned a lot during the research and writing process for this book. I hope you’ll find the learnings useful. Feedback is much appreciated!
+
+hashtag#aiengineering hashtag#aiapplications hashtag#mlengineering
+
+PostPost
+To understand the open source AI landscape, I went through the most popular AI repositories on GitHub, categorized them, and studied their growth trajectories. Here are some of the learnings:
+
+https://lnkd.in/exR-PGZX
+
+1. There are 845 generative AI repos with at least 500 stars on GitHub. They are built with contributions from over 20,000 developers, making almost a million commits.
+
+2. I divided the AI stack into four layers: application, application development, model development, and infrastructure. The application and application development layers have seen the most growth in 2023. The infrastructure layer remains more or less the same. Some categories that have seen the most growth include AI interface, inference optimization, and prompt engineering.
+
+3. The landscape exploded in late 2022 but seems to have calmed down since September 2023.
+
+4. While big companies still dominate the landscape, there’s a rise in massively popular software hosted by individuals. Several have speculated that there will soon be billion-dollar one-person companies.
+
+5. China's open source ecosystem is rapidly growing. 6 out of 20 GitHub accounts with the most popular AI repos originate in China, with two from Tsinghua University and two from Shanghai AI Lab.
+
+hashtag#generativeai hashtag#aiapplications hashtag#llmops 
+AI stack over time
+
+PostPost
+New post: Building LLM applications for production
+
+Link: https://lnkd.in/gi6aKZyJ
+
+I spent the last month talking with companies who are building applications on top of LLMs and realized: it’s easy to build something cool with LLMs, but very hard to build something production-ready with LLMs.
+
+There are several challenges that make productionizing LLM applications hard:
+
+1. The ambiguity of natural languages can make for a delightful user experience but a painful developer experience.
+
+2. The stochastic nature of LLMs can lead to inconsistency in user experience and silent failures.
+
+3. How fast things are evolving makes it very hard to make business decisions: analysis on cost-latency, build (using open source) vs. buy (using paid APIs), prompting vs. finetuning vs. newer techniques needs to be done constantly.
+
+This post discusses these challenges, and what companies are doing to address them. I also discuss more complex applications involving task composability, agent, and control flows.
+
+hashtag#llms hashtag#promptengineering hashtag#mlops hashtag#machinelearning hashtag#largelanguagemodels 
+No alternative text description for this image
+
+    LinkLink
+    Real-time machine learning: challenges and solutionsReal-time machine learning: challenges and solutions
+    Chip HuyenChip Huyen
+    In the last year, I’ve talked to ~30 companies in different industries about their challenges with real-time machine learning. I’ve also worked with quite a few to find the solutions. This post outlines the solutions for (1) online prediction and (2) continual learning, with step-by-step use cases, considerations, and technologies required for each level.In the last year, I’ve talked to ~30 companies in different industries about their challenges with real-time machine learning. I’ve also worked with quite a few to find the solutions. This post outlines the solutions for (1) online prediction and (2) continual learning, with step-by-step use cases, considerations, and technologies required for each level.
+
+ActivityActivity
+
+250,534 followers250,534 followers
+Loaded 3 Posts posts
+
+    Chip Huyen posted this • 2d2d
+    It’s done! My editor just told me that the manuscript has been sent to the printers! 150,000 words, 200+ illustrations, 250 footnotes, and over 1200 reference links. This wouldn’t have been possible without the help of so many people who reviewed the early drafts, answered my thousands of questions, introduced me to fascinating use cases, or helped me see the beauty of overlooked techniques. * The Kindle is already out! https://amzn.to/49j1cGS * Paperback copies should be available in a few weeks, hopefully before the end of the year, but you can preorder on Amazon * The full manuscript is now on O’Reilly platform: https://lnkd.in/gYtF2taE #aiengineering #aiapplications #llms
+    AI Engineering book
+    It’s done! My editor just told me that the manuscript has been sent to the printers!
+
+    150,000 words, 200+ illustrations, 250 footnotes, and over 1200 reference links.
+
+    This wouldn’t have been possible without the help of so many people who reviewed the early drafts, answered my thousands of questions, introduced me to fascinating use cases, or helped me see the beauty of overlooked techniques.
+
+    * The Kindle is already out! https://amzn.to/49j1cGS
+
+    * Paperback copies should be available in a few weeks, hopefully before the end of the year, but you can preorder on Amazon
+
+    * The full manuscript is now on O’Reilly platform: https://lnkd.in/gYtF2taE 
+
+    hashtag#aiengineering hashtag#aiapplications hashtag#llms 
+
+Chip Huyen posted this • 2mo2mo
+Hello Australia 🦘 👋 I'll be in Sydney, Perth, Melbourne, and Auckland for the next two weeks speaking about data and AI. I'll be sharing the stage with Joe Reis 🤓 Eevamaija Virtanen Zach Wilson Adi Polak and many more wonderful data folks. If you're around, please say hi! I've heard wonderful things about the tech community here, and can't wait to get to know you. This is my first time in both countries. What must I eat/do/see? Thanks Peter Hanssens and DataEngBytes for inviting me.
+Hello Australia 🦘 👋 
+
+I'll be in Sydney, Perth, Melbourne, and Auckland for the next two weeks speaking about data and AI. I'll be sharing the stage with Joe Reis 🤓 Eevamaija Virtanen Zach Wilson Adi Polak and many more wonderful data folks.
+
+If you're around, please say hi! I've heard wonderful things about the tech community here, and can't wait to get to know you.
+
+This is my first time in both countries. What must I eat/do/see?
+
+Thanks Peter Hanssens and DataEngBytes for inviting me.
+
+Chip Huyen posted this • 4mo4mo
+Building a platform for generative AI applications Link: https://lnkd.in/gDUcwQ-v After studying how companies deploy generative AI applications, I noticed many similarities in their platforms. This post outlines these common components, what they do, and implementation considerations. This post starts from the simplest architecture and progressively add more components. 1. Enhance context input into a model by giving the model access to external data sources and tools for information gathering. 2. Put in guardrails to protect your system and your users. 3. Add model router and gateway to support complex pipelines and add more security. 4. Optimize for latency and costs with cache. 5. Add complex logic and write actions to maximize your system’s capabilities. I try my best to keep the architecture general, but certain applications might deviate. As always, feedback is appreciated! #mlengineering #genai #aiapplications
+Building a platform for generative AI applications
+
+Link: https://lnkd.in/gDUcwQ-v
+
+After studying how companies deploy generative AI applications, I noticed many similarities in their platforms. This post outlines these common components, what they do, and implementation considerations.
+
+This post starts from the simplest architecture and progressively add more components.
+
+1. Enhance context input into a model by giving the model access to external data sources and tools for information gathering.
+
+2. Put in guardrails to protect your system and your users.
+
+3. Add model router and gateway to support complex pipelines and add more security.
+
+4. Optimize for latency and costs with cache.
+
+5. Add complex logic and write actions to maximize your system’s capabilities.
+
+I try my best to keep the architecture general, but certain applications might deviate. As always, feedback is appreciated!
+
+hashtag#mlengineering hashtag#genai hashtag#aiapplications
+
+Show all posts
+ExperienceExperience
+
+    MLOps Learners logo
+    Community CommitteeCommunity Committee
+    MLOps Learners · Full-timeMLOps Learners · Full-time Sep 2021 - Present · 3 yrs 4 mosSep 2021 to Present · 3 yrs 4 mos
+            Learning and sharing best practices for ML production from this amazing community!Learning and sharing best practices for ML production from this amazing community!
+    Voltron Data logo
+    VP of AI & OSSVP of AI & OSS
+    Voltron DataVoltron Data Jan 2024 - Oct 2024 · 10 mosJan 2024 to Oct 2024 · 10 mos
+            Voltron Data's mission is to make data processing cheap, fast, and easy on GPUs. We believe in a future where any company should be able to leverage any hardware and any data platform for their needs. We contribute to and maintain open source projects around open data standards and formats, including Apache Arrow, Flight, Ibis, and Substrait.Voltron Data's mission is to make data processing cheap, fast, and easy on GPUs. We believe in a future where any company should be able to leverage any hardware and any data platform for their needs. We contribute to and maintain open source projects around open data standards and formats, including Apache Arrow, Flight, Ibis, and Substrait.
+    Claypot AI (@Voltron Data) logo
+    Co-FounderCo-Founder
+    Claypot AI · Full-timeClaypot AI · Full-time Nov 2021 - Jan 2024 · 2 yrs 3 mosNov 2021 to Jan 2024 · 2 yrs 3 mos
+            Acquired by Voltron DataAcquired by Voltron Data
+    Stanford University logo
+    Adjunct LecturerAdjunct Lecturer
+    Stanford UniversityStanford University Jan 2021 - 2023 · 2 yrs 1 moJan 2021 to 2023 · 2 yrs 1 mo
+            A new course focusing on machine learning systems design (cs329s.stanford.edu)A new course focusing on machine learning systems design (cs329s.stanford.edu)
+            CS 329S: Machine Learning Systems DesignCS 329S: Machine Learning Systems Design
+            This course aims to provide an iterative framework for designing real-world machine learning systems. The goal of this framework is to build a system that is deployable, reliable, scalable, and adaptable.This course aims to provide an iterative framework for designing real-world machine learning systems. The goal of this framework is to build a system that is deployable, reliable, scalable, and adaptable.
+    Snorkel AI logo
+    ML Engineer & Open Source LeadML Engineer & Open Source Lead
+    Snorkel AI · Full-timeSnorkel AI · Full-time Dec 2019 - Feb 2021 · 1 yr 3 mosDec 2019 to Feb 2021 · 1 yr 3 mos
+            Snorkel Flow is an end-to-end platform that focuses on a revolutionary new programmatic approach to labeling, building, and managing training datasets, enabling a new level of rapid, iterative development and deployment of AI applications.Snorkel Flow is an end-to-end platform that focuses on a revolutionary new programmatic approach to labeling, building, and managing training datasets, enabling a new level of rapid, iterative development and deployment of AI applications.
+            The Data-First Platform for Enterprise AIThe Data-First Platform for Enterprise AI
+            Build, manage, and monitor end-to-end AI applications with Snorkel Flow by focusing on the part that matters: the data.Build, manage, and monitor end-to-end AI applications with Snorkel Flow by focusing on the part that matters: the data.
+
+Show all 17 experiences
+EducationEducation
+
+    Stanford University logo
+    Stanford UniversityStanford University
+    Master’s Degree, Computer ScienceMaster’s Degree, Computer Science
+    Stanford University logo
+    Stanford UniversityStanford University
+    Bachelor's Degree, Computer ScienceBachelor's Degree, Computer Science
+        Activities and societies: Creative Writing Group, CS198 Section Leading CommunityActivities and societies: Creative Writing Group, CS198 Section Leading Community
+
+SkillsSkills
+
+    Artificial IntelligenceArtificial Intelligence
+        Endorsed by Sadid Hasan and 7 others who are highly skilled at thisEndorsed by Sadid Hasan and 7 others who are highly skilled at this
+        Endorsed by Martin Stein and 2 other mutual connectionsEndorsed by Martin Stein and 2 other mutual connections
+        89 endorsements89 endorsements
+
+ProgrammingProgramming
+
+    Endorsed by Zach Wilson and 3 others who are highly skilled at thisEndorsed by Zach Wilson and 3 others who are highly skilled at this
+    Endorsed by Aishwarya Nevrekar and 1 other mutual connectionEndorsed by Aishwarya Nevrekar and 1 other mutual connection
+    70 endorsements70 endorsements
+
+Show all 46 skills
+RecommendationsRecommendations
+Recommend Chip
+
+    Phuong Luu Quy profile picture
+    Phuong Luu QuyPhuong Luu Quy
+    · 2ndSecond degree connection
+    Head of Business Strategy | Founder at Hoi An Shuttle BusHead of Business Strategy | Founder at Hoi An Shuttle Bus October 24, 2014, Phuong worked with Chip on the same teamOctober 24, 2014, Phuong worked with Chip on the same team
+            You'll never know what she hides behind her smile if you don't give her a trial. Trust me, she will surprise you. She has a dedicated heart to finish what she has decided to do. And above all, she loves what she does. To me, that's the most important thing a successful person need.You'll never know what she hides behind her smile if you don't give her a trial. Trust me, she will surprise you. She has a dedicated heart to finish what she has decided to do. And above all, she loves what she does. To me, that's the most important thing a successful person need.
+    Hung Nguyen profile picture
+    Hung NguyenHung Nguyen
+    · 2ndSecond degree connection
+    Senior Product ManagerSenior Product Manager March 11, 2013, Hung worked with Chip on the same teamMarch 11, 2013, Hung worked with Chip on the same team
+            Chip was evangelist for our Project. She did it well.Chip was evangelist for our Project. She did it well.
+
+Show all 3 received
+CoursesCourses
+
+    Artificial Intelligence: Principles and TechniquesArtificial Intelligence: Principles and Techniques
+    CS221CS221
+        Associated with Stanford UniversityAssociated with Stanford University
+    Computer Organization and SystemsComputer Organization and Systems
+    CS107CS107
+        Associated with Stanford UniversityAssociated with Stanford University
+
+Show all 10 courses
+Honors & awardsHonors & awards
+
+    Ericsson Innovation Awards ' Regional WinnerEricsson Innovation Awards ' Regional Winner
+    Issued by Ericsson Innovation Awards · Dec 2017Issued by Ericsson Innovation Awards · Dec 2017
+        Associated with Stanford UniversityAssociated with Stanford University
+            Judges' favorite in Americas. Top 15 out of 1,444 projects worldwide.Judges' favorite in Americas. Top 15 out of 1,444 projects worldwide.
+    Snap Inc. Research ScholarSnap Inc. Research Scholar
+    Issued by Snap Inc. · Dec 2017Issued by Snap Inc. · Dec 2017
+        Associated with Stanford UniversityAssociated with Stanford University
+            US$10,000 scholarships awarded to outstanding undergraduate or Master’s students in computer science and related areas. 
+
+            US$10,000 scholarships awarded to outstanding undergraduate or Master’s students in computer science and related areas. 
+
+Show all 6 honors & awards
+LanguagesLanguages
+
+    EnglishEnglish
+    Full professional proficiencyFull professional proficiency
+    FrenchFrench
+    Limited working proficiencyLimited working proficiency
+
+Show all 4 languages
+InterestsInterests
+
+    Alex Pall profile picture
+    Alex PallAlex Pall
+
+· 2ndSecond degree connection
+Founder @ The Chainsmokers + Mantis Venture CapitalFounder @ The Chainsmokers + Mantis Venture Capital 43,122 followers43,122 followers
+
+Kai Waehner profile picture
+Kai WaehnerKai Waehner
+· 2ndSecond degree connection
+Global Field CTO | Author | International Speaker | Follow me with Data in MotionGlobal Field CTO | Author | International Speaker | Follow me with Data in Motion 34,019 followers34,019 followers
+
+Show all Top Voices
+CausesCauses
+Economic Empowerment • Poverty Alleviation • Science and TechnologyEconomic Empowerment • Poverty Alleviation • Science and Technology
+More profiles for youMore profiles for you
+
+    Ian Goodfellow profile picture
+    Ian GoodfellowIan Goodfellow
+    · 2ndSecond degree connection
+    Research ScientistResearch Scientist
+        View profile
+    Deepti Raghavan profile picture
+    Deepti RaghavanDeepti Raghavan
+    · 3rdThird degree connection
+    Assistant Professor of Computer Science at Brown UniversityAssistant Professor of Computer Science at Brown University
+        View profile
+    Sara Hooker profile picture
+    Sara HookerSara Hooker
+    · 2ndSecond degree connection
+    Head of Cohere For AIHead of Cohere For AI
+
+Aravind Srinivas profile picture
+Aravind SrinivasAravind Srinivas
+· 2ndSecond degree connection
+Cofounder & CEO, PerplexityCofounder & CEO, Perplexity
+
+Andrew Ng profile picture
+Andrew NgAndrew Ng
+· 2ndSecond degree connection
+Founder of DeepLearning.AI; Managing General Partner of AI Fund; Exec Chairman of Landing AIFounder of DeepLearning.AI; Managing General Partner of AI Fund; Exec Chairman of Landing AI
+
+Show all
+Explore Premium profilesExplore Premium profiles
+
+    Charles Shibu Christin profile picture
+    Charles Shibu ChristinCharles Shibu Christin
+    · 2ndSecond degree connection
+    CRISC | CISA | CISM | CGEIT | ISMS 27001:2022 LA | CHFI | CEH | CTIA | ECIH | CEI | CASP | CCIE Security | CCNP | CyberOps | Threat intelligence | Strategic Cyber solutions | GRCCRISC | CISA | CISM | CGEIT | ISMS 27001:2022 LA | CHFI | CEH | CTIA | ECIH | CEI | CASP | CCIE Security | CCNP | CyberOps | Threat intelligence | Strategic Cyber solutions | GRC
+
+Kriti Chhabra profile picture
+Kriti ChhabraKriti Chhabra
+· 2ndSecond degree connection
+Data Scientist at ColesData Scientist at Coles
+
+Érica Lélis Diall profile picture
+Érica Lélis DiallÉrica Lélis Diall
+· 3rdThird degree connection
+StudentStudent
+
+    View profile
+
+Chris Griffin profile picture
+Chris GriffinChris Griffin
+· 2ndSecond degree connection
+Staff IT EngineerStaff IT Engineer
+
+Try premium to stand outTry premium to stand out
+People you may knowPeople you may know
+
+    Natalie Quinlivan profile picture
+    Natalie QuinlivanNatalie Quinlivan
+    Advocating for life-long learner agency.Advocating for life-long learner agency.
+
+Fereshteh Rafieian profile picture
+Fereshteh RafieianFereshteh Rafieian
+Programme Specialist for science policy, open science, capacity building for scienceProgramme Specialist for science policy, open science, capacity building for science
+
+Anthony (Tony) Hyman profile picture
+Anthony (Tony) HymanAnthony (Tony) Hyman
+Director at MPI-CBGDirector at MPI-CBG
+
+Malcolm Barrett profile picture
+Malcolm BarrettMalcolm Barrett
+Research Software Engineer @ Stanford | PhD in Epidemiology | Causal Inference | Open-Source Data ScienceResearch Software Engineer @ Stanford | PhD in Epidemiology | Causal Inference | Open-Source Data Science
+
+Benjamin Vincent, DPhil profile picture
+Benjamin Vincent, DPhilBenjamin Vincent, DPhil
+Bayesian/Causal Data Scientist. Developer of CausalPy. Director of InferenceWorks Ltd.Bayesian/Causal Data Scientist. Developer of CausalPy. Director of InferenceWorks Ltd.
+
+Show all
+You might likeYou might like
+
+Courses for youCourses for you
+
+    Image for Artificial Intelligence and Application Security
+    Artificial Intelligence and Application SecurityArtificial Intelligence and Application Security
+    Skills: Application Security, Artificial Intelligence (AI)Skills: Application Security, Artificial Intelligence (AI)
+    50min50min
+
+Image for Practice Exam 3 for AWS Certified Developer - Associate (DVA-C02)
+Practice Exam 3 for AWS Certified Developer - Associate (DVA-C02)Practice Exam 3 for AWS Certified Developer - Associate (DVA-C02)
+Skills: Cloud Computing, Amazon Web Services (AWS)Skills: Cloud Computing, Amazon Web Services (AWS)
+4min4min
+
+Show all
+Hugo Bowne-Anderson
+Status is online
+Page inboxes
+8 8 new notifications
