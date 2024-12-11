@@ -4,13 +4,20 @@ import openai
 
 client = openai.Client()
 
+def addition(a : int, b : int) -> int:
+    """Dummy logic function"""
+    return a + b
+
 
 def extract_profile_data(linkedin_text: str) -> dict:
     """
-    Original version: Extract structured data from LinkedIn text with less strict constraints.
+    Original version: Extract structured data from LinkedIn text with
+    less strict constraints.
     """
     messages = [
-        {"role": "system", "content": "You are an expert in extracting structured information from text."},
+        {"role": "system",
+         "content": "You are an expert in extracting structured information "
+                    "from text."},
         {"role": "user", "content": f"""
 Extract the following structured information from the text below:
 - Name
@@ -37,10 +44,13 @@ Output the result as a JSON object.
 
 def extract_profile_data_strict(linkedin_text: str) -> dict:
     """
-    New version: Extract structured data with stricter constraints (e.g., one role, specific formatting).
+    New version: Extract structured data with stricter constraints
+    (e.g., one role, specific formatting).
     """
     messages = [
-        {"role": "system", "content": "You are an expert in extracting structured information from text."},
+        {"role": "system",
+         "content": "You are an expert in extracting structured "
+                    "information from text."},
         {"role": "user", "content": f"""
 Extract the following structured information from the text below. Follow these guidelines:
 - Name: Include only the person's full name.

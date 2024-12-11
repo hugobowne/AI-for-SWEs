@@ -1,22 +1,86 @@
+"""
+To run:
+> pytest -vv test_logic.py
+"""
+from datetime import datetime
+
 import pytest
 import logic
 import json
-import os
 
-# Define the mode at the top of the file: "strict" or "non-strict"
-mode = "strict"  # Change this to "non-strict" for the original function
+# example pytest test functions
 
-# Define the file path at the top of the file
-path = "data/stefanLI.txt"  # Default file path (can be changed here)
+# pytest -vv test_logic.py::test_some_logic
+def test_some_logic():
+    actual = logic.addition(1, 2)
+    assert actual == 3
 
-# Expected values for each file
+# pytest -vv test_logic.py::test_some_other_logic_error
+def test_some_other_logic_error():
+    with pytest.raises(TypeError):
+        logic.addition(1, None)
+
+@pytest.mark.parametrize(
+    "a,b,expected", [
+        (1, 2, 3),
+        (-1, 2, 1),
+])
+def test_some_logic_parameterized(a, b, expected):
+    actual = logic.addition(a, b)
+    assert actual == expected
+
+# some helper functions for today
+
+# Helper function to load text from a file
+def load_text_from_file(file_path):
+    with open(file_path, "r") as f:
+        return f.read()
+
+# testing our LLM call
+extract_profile_data = logic.extract_profile_data
+# extract_profile_data = logic.extract_profile_data_strict
+
+# pytest -vv test_logic.py::test_extract_profile_data_stefan
+def test_extract_profile_data_stefan():
+    linkedin_text = load_text_from_file("data/stefanLI.txt")
+    expected = {
+        "Name": "Stefan Krawczyk",
+        "Current Role": "CEO @ DAGWorks Inc.",
+        "Location": "San Francisco, California, United States",
+        "Previous Roles": [],
+        "Education": [],
+    }
+    output = extract_profile_data(linkedin_text)
+    assert output == expected
+    assert output["Name"] == expected["Name"]
+    assert output["Current Role"] == expected["Current Role"]
+    assert output["Location"] == expected["Location"]
+    assert output["Previous Roles"] == expected["Previous Roles"]
+    assert output["Education"] == expected["Education"]
+    # problem: asserts fail at the first failure, but we want to evaluate all of them...
+
+# pytest -vv test_logic.py::test_extract_profile_data_stefan_stability
+def test_extract_profile_data_stefan_stability():
+    linkedin_text = load_text_from_file("data/stefanLI.txt")
+    outputs = [extract_profile_data(linkedin_text) for _ in range(5)]
+    # Check for consistency - for each key create a set of values
+    variances = {}
+    for key in outputs[0].keys():
+        all_values = set(json.dumps(output[key]) for output in outputs)
+        if len(all_values) > 1:
+            variances[key] = list(all_values)
+    variances_str = json.dumps(variances, indent=2)
+    assert len(variances) == 0, "Outputs vary across iterations:\n" + variances_str
+
+
+# Do parametrized testing for more inputs
 expected_values = {
     "data/stefanLI.txt": {
         "Name": "Stefan Krawczyk",
         "Current Role": "CEO @ DAGWorks Inc.",
         "Location": "San Francisco, California, United States",
-        "Previous Roles": "",
-        "Education": "",
+        "Previous Roles": [],
+        "Education": [],
     },
     "data/hbaLI.txt": {
         "Name": "Hugo Bowne-Anderson",
@@ -33,54 +97,66 @@ expected_values = {
     },
 }
 
-# Helper function to load text from a file
-def load_text_from_file(file_path):
-    with open(file_path, "r") as f:
-        return f.read()
+# pytest -vv -rP test_logic.py::test_extract_profile_data test_logic.py::test_print_results
+@pytest.mark.parametrize(
+    "file_path,expected", [
+        ("data/stefanLI.txt", expected_values["data/stefanLI.txt"]),
+        ("data/hbaLI.txt", expected_values["data/hbaLI.txt"]),
+])
+def test_extract_profile_data(file_path, expected, results_bag):
+    """Parametrized test for extract_profile_data function
+    Uses pytest-harvest `results_bag` fixture to store results."""
+    linkedin_text = load_text_from_file(file_path)
+    actual = extract_profile_data(linkedin_text)
+    results_bag.input = linkedin_text
+    results_bag.expected = expected
+    results_bag.actual = actual
+    results_bag.exact_match = actual == expected
+    for k in expected.keys():
+        results_bag[k] = actual[k] == expected[k]
 
-# Select the appropriate function based on the mode
-def extract_profile_data_based_on_mode(linkedin_text):
-    if mode == "strict":
-        return logic.extract_profile_data_strict(linkedin_text)
-    elif mode == "non-strict":
-        return logic.extract_profile_data(linkedin_text)
-    else:
-        raise ValueError(f"Invalid mode: {mode}. Use 'strict' or 'non-strict'.")
 
-# Test if the output is valid JSON using a file
-def test_valid_json_with_file():
-    assert os.path.exists(path), f"File does not exist: {path}"
-    linkedin_text = load_text_from_file(path)
-    raw_output = extract_profile_data_based_on_mode(linkedin_text)
+def test_print_results(module_results_df):
+    """This is run last and prints out the results.
 
-    try:
-        parsed_output = json.loads(json.dumps(raw_output))
-        assert isinstance(parsed_output, dict), "Output is not a valid JSON object"
-    except json.JSONDecodeError:
-        pytest.fail("Output is not valid JSON")
+    This is where we could put some hard asserts as well to fail
+    the test suite if we need to.
 
-# Test if the extracted JSON contains the required fields using a file
-def test_field_validation_with_file():
-    assert os.path.exists(path), f"File does not exist: {path}"
-    linkedin_text = load_text_from_file(path)
-    assert path in expected_values, f"No expected values defined for file: {path}"
+    Alternatively we could write pytest hooks, etc. but for this
+    lesson this is simpler.
 
-    expected = expected_values[path]
-    output = extract_profile_data_based_on_mode(linkedin_text)
+    :param module_results_df: pytest-harvest fixture
+    """
+    module_results_df.reset_index(inplace=True)
+    # filter to only the tests of interest
+    tests_of_interest = module_results_df[
+        module_results_df["exact_match"].isna() == False
+    ]
+    print(tests_of_interest.columns)
+    print(tests_of_interest.head())
+    # compute accuracy by field
+    fields = ["Name", "Current Role", "Location", "Previous Roles", "Education"]
+    field_accuracy = {
+        field: (sum(tests_of_interest[field]) / len(tests_of_interest)) * 100.0
+        for field in fields
+    }
+    # print accuracy by field
+    print("Accuracy by field:")
+    for field, accuracy in field_accuracy.items():
+        print(f"{field}: {accuracy}%")
+    # can save to CSV etc
+    curent_datetime = datetime.now().strftime("%Y%m%d-%H%M%S")
+    columns_to_output = [
+        "test_id",
+        "status",
+        "duration_ms",
+        "file_path",
+        "input",
+        "expected",
+        "actual",
+        "exact_match",
 
-    # Validate individual fields
-    for field, expected_value in expected.items():
-        if isinstance(expected_value, list):
-            assert sorted(output.get(field, [])) == sorted(expected_value), f"Field '{field}' does not match. Expected: {expected_value}, Got: {output.get(field)}"
-        else:
-            assert output.get(field) == expected_value, f"Field '{field}' does not match. Expected: {expected_value}, Got: {output.get(field)}"
-
-# Test for consistency across iterations
-@pytest.mark.parametrize("iterations", [5])  # Number of iterations
-def test_no_variability_with_file(iterations):
-    assert os.path.exists(path), f"File does not exist: {path}"
-    linkedin_text = load_text_from_file(path)
-    outputs = [extract_profile_data_based_on_mode(linkedin_text) for _ in range(iterations)]
-
-    # Check for consistency
-    assert len(set(json.dumps(output) for output in outputs)) == 1, "Outputs vary across iterations"
+    ] + fields
+    tests_of_interest[columns_to_output].to_csv(f"logic_results{curent_datetime}.csv", quoting=1)
+    # assert anything we must fail on
+    assert field_accuracy["Name"] > 99.0
