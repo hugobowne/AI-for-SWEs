@@ -1,0 +1,223 @@
+
+0 notifications total
+
+Home
+My Network
+Jobs
+Messaging
+Notifications
+
+    Advertise
+
+Hamel Husain
+
+Background Image
+Hamel Husain
+1st degree connection 1st
+Founder @ Parlance Labs | Entrepreneur in Residence, ML & Data Science
+
+United States Contact info
+
+    11,293 followers
+    500+ connections
+
+Kirk Mettler, (Michael) Sebastian Metti, and 224 other mutual connectionsKirk Mettler, (Michael) Sebastian Metti, and 224 other mutual connections
+
+HighlightsHighlights
+
+    Company logo
+    You both worked at OuterboundsYou both worked at Outerbounds
+    You both worked at Outerbounds in February 2022You both worked at Outerbounds in February 2022
+        Message
+
+AboutAbout
+I enjoy building tools and platforms to make ML more accessible. I have authored and am a core maintainer of many popular open source tools: https://hamel.dev/oss/opensource.html Furthermore, I have extensive experience (20+ years) as a machine learning engineer across a wide variety of industries.
+
+I am currently helping people operationalize LLM models. I worked on GitHub Copilot, a large language model deployed at scale used by over 100M developers, as well as pre-cursors to Copilot like CodeSearchNet.
+
+Professional Page: https://hamel.dev/I enjoy building tools and platforms to make ML more accessible. I have authored and am a core maintainer of many popular open source tools: https://hamel.dev/oss/opensource.html Furthermore, I have extensive experience (20+ years) as a machine learning engineer across a wide variety of industries. I am currently helping people operationalize LLM models. I worked on GitHub Copilot, a large language model deployed at scale used by over 100M developers, as well as pre-cursors to Copilot like CodeSearchNet. Professional Page: https://hamel.dev/
+FeaturedFeatured
+
+    RecommendationRecommendation
+    Nikole “Nikki” Vaughn profile picture
+    Nikole “Nikki” VaughnNikole “Nikki” Vaughn
+
+· 2ndSecond degree connection
+Outcomes Driven | Board Member | AI & Data Advocate | IT Executive | BizDev | Founder | Curious
+Establishes strategic systems bringing creative visions to reality.
+INNOVATION. IMPACT. DELIVERED.
+* Human factors drive IT*Outcomes Driven | Board Member | AI & Data Advocate | IT Executive | BizDev | Founder | Curious Establishes strategic systems bringing creative visions to reality. INNOVATION. IMPACT. DELIVERED. * Human factors drive IT*
+October 29, 2010, Nikole “Nikki” managed Hamel directlyOctober 29, 2010, Nikole “Nikki” managed Hamel directly
+
+        Hamel is hard working, can stay focused amidst chaos, and driven. He is someone I would enjoy to have on a team. He has a strong attention to data detail and is technically savvy.Hamel is hard working, can stay focused amidst chaos, and driven. He is someone I would enjoy to have on a team. He has a strong attention to data detail and is technically savvy.
+
+Featured with PremiumFeatured with Premium
+PostPost
+I often hear that evals are the most confusing part of creating LLM AI products. It's a shame b/c IMO, domain-specific evals are the most important part of an AI product! I've written a detailed blog post with real examples on how to do this https://lnkd.in/gXf9afPV
+Your AI Product Needs Evals –
+hamel.dev
+
+ActivityActivity
+
+11,293 followers11,293 followers
+Loaded 3 Posts posts
+
+    Hamel Husain reposted this • 15h15h
+    Had a lot of fun chatting with Hamel H. and learning how to improve our evals with Windy (our Slack agent for Windmill) It’s relatively straightforward to get pretty good performance with LLMs, but achieving exceptional results is about 10x harder. Evals with LLM-as-a-Judge are going to help us make Windy amazing. I’ll report back here in a few weeks with an update., Multi-Turn Chat Evals – Hamel’s Blog, hamel.dev
+    Had a lot of fun chatting with Hamel H. and learning how to improve our evals with Windy (our Slack agent for Windmill) It’s relatively straightforward to get pretty good performance with LLMs, but achieving exceptional results is about 10x harder. Evals with LLM-as-a-Judge are going to help us make Windy amazing. I’ll report back here in a few weeks with an update.
+    Multi-Turn Chat Evals – Hamel’s Blog
+    hamel.dev
+    Hamel Husain reposted this • 15h15h
+    Had a lot of fun chatting with Hamel H. and learning how to improve our evals with Windy (our Slack agent for Windmill) It’s relatively straightforward to get pretty good performance with LLMs, but achieving exceptional results is about 10x harder. Evals with LLM-as-a-Judge are going to help us make Windy amazing. I’ll report back here in a few weeks with an update., Multi-Turn Chat Evals – Hamel’s Blog, hamel.dev
+    Had a lot of fun chatting with Hamel H. and learning how to improve our evals with Windy (our Slack agent for Windmill) It’s relatively straightforward to get pretty good performance with LLMs, but achieving exceptional results is about 10x harder. Evals with LLM-as-a-Judge are going to help us make Windy amazing. I’ll report back here in a few weeks with an update.
+    Multi-Turn Chat Evals – Hamel’s Blog
+    hamel.dev
+    Hamel Husain reposted this • 1d1d
+    I'm super excited to announce that Albert Ziegler and my book are finally available for purchase on Amazon https://amzn.to/4fMj2Ef. If you're building LLM-based applications, then this book will help you understand the principles necessary to ensure your success. , Prompt Engineering for LLMs: The Art and Science of Building Large Language Model-Based Applications, amazon.com
+    I'm super excited to announce that Albert Ziegler and my book are finally available for purchase on Amazon https://amzn.to/4fMj2Ef.
+
+    If you're building LLM-based applications, then this book will help you understand the principles necessary to ensure your success.
+    Prompt Engineering for LLMs: The Art and Science of Building Large Language Model-Based Applications
+    amazon.com
+
+Show all posts
+ExperienceExperience
+
+    Parlance Labs logo
+    AI EngineerAI Engineer
+    Parlance Labs · Full-timeParlance Labs · Full-time May 2023 - Present · 1 yr 8 mosMay 2023 to Present · 1 yr 8 mos United StatesUnited States
+            I work with companies to build great AI products. https://parlance-labs.com
+
+            You should hire us if:
+            - You don’t know how to consistently improve your LLM products.
+            - Your LLMs are too expensive or slow.
+            - You are overwhelmed by tools/frameworks.
+
+             https://parlance-labs.comI work with companies to build great AI products. https://parlance-labs.com You should hire us if: - You don’t know how to consistently improve your LLM products. - Your LLMs are too expensive or slow. - You are overwhelmed by tools/frameworks. https://parlance-labs.com
+            Reduced AI errors by 80% for a CRM copilot.Reduced AI errors by 80% for a CRM copilot.
+            Parlance Labs reduced AI errors by 80% and increased time to ship new AI features by 3x for Rechat (https://rechat.com/). This transformed a product from being a demo to production-ready.Parlance Labs reduced AI errors by 80% and increased time to ship new AI features by 3x for Rechat (https://rechat.com/). This transformed a product from being a demo to production-ready.
+    Bain Capital logo
+    ScoutScout
+    Bain Capital · Part-timeBain Capital · Part-time Aug 2024 - Present · 5 mosAug 2024 to Present · 5 mos
+            Venture capital scout. Invest between $10k-25k in companies.Venture capital scout. Invest between $10k-25k in companies.
+    fast.ai logo
+    fast.aifast.ai
+    3 yrs 9 mos3 yrs 9 mos
+        Entrepreneur in ResidenceEntrepreneur in Residence
+        Full-timeFull-time Aug 2022 - May 2023 · 10 mosAug 2022 to May 2023 · 10 mos
+                Explored commercial opportunities around a project I help maintain nbdev: https://nbdev.fast.ai/Explored commercial opportunities around a project I help maintain nbdev: https://nbdev.fast.ai/
+        Core Contributor & MaintainerCore Contributor & Maintainer
+        Sep 2019 - Aug 2022 · 3 yrsSep 2019 to Aug 2022 · 3 yrs
+                Working with Jeremy Howard on various open-source projects. My focus is on infrastructure, developer tools, DevOps, and software engineering.
+
+                Some products I've been involved with:
+                - nbdev: A notebook-enabled software development environment - github.com/fastai/nbdev
+                - fastcore: Extensions to the python programming language - github.com/fastai/fastcore
+                - ghapi: A python client for the GitHub API w/ support for GitHub Actions - github.com/fastai/ghapi
+                - fastpages: A blogging platform with support for Jupyter notebooks - github.com/fastai/fastpages
+
+                I've also created and help maintain many of the CI, integration tests, and build tools for the fastai ecosystem. Some examples include Conda build tooling https://github.com/fastai/fastconda, Docker image maintenance https://github.com/fastai/docker-containers, and many others.Working with Jeremy Howard on various open-source projects. My focus is on infrastructure, developer tools, DevOps, and software engineering. Some products I've been involved with: - nbdev: A notebook-enabled software development environment - github.com/fastai/nbdev - fastcore: Extensions to the python programming language - github.com/fastai/fastcore - ghapi: A python client for the GitHub API w/ support for GitHub Actions - github.com/fastai/ghapi - fastpages: A blogging platform with support for Jupyter notebooks - github.com/fastai/fastpages I've also created and help maintain many of the CI, integration tests, and build tools for the fastai ecosystem. Some examples include Conda build tooling https://github.com/fastai/fastconda, Docker image maintenance https://github.com/fastai/docker-containers, and many others.
+    Outerbounds logo
+    Head of ML & Data ScienceHead of ML & Data Science
+    Outerbounds · Full-timeOuterbounds · Full-time Jan 2022 - Aug 2022 · 8 mosJan 2022 to Aug 2022 · 8 mos
+            Building ML Tooling with Metaflow.
+
+            Left to explore commercial opportunities with fastai & nbdevBuilding ML Tooling with Metaflow. Left to explore commercial opportunities with fastai & nbdev
+            Notebooks In Production With Metaflow - OuterboundsNotebooks In Production With Metaflow - Outerbounds
+            Learn how to use notebooks in production ML pipelines with a new Metaflow feature. This is model framework-agnostic and so will work with all types of ML models, whether they be scikit-learn, TensorFlow, PyTorch, or XGBoost.Learn how to use notebooks in production ML pipelines with a new Metaflow feature. This is model framework-agnostic and so will work with all types of ML models, whether they be scikit-learn, TensorFlow, PyTorch, or XGBoost.
+    GitHub logo
+    Staff Machine Learning EngineerStaff Machine Learning Engineer
+    GitHub · Full-timeGitHub · Full-time Oct 2017 - Jan 2022 · 4 yrs 4 mosOct 2017 to Jan 2022 · 4 yrs 4 mos San Francisco Bay AreaSan Francisco Bay Area
+            - Created systems and conducted research that enabled representation learning of code, issues, repos, and users.
+            - Led launch of CodeSearchNet (www.github.com/github/CodeSearchNet)
+            - Machine Learning Ops & GitHub Actions integrations: https://www.mlops-github.com
+
+            Open sourced several examples of how to build data products and use deep learning with public GitHub data. These examples can be viewed at: http://hamel.dev, and include
+
+             - Summarizing GitHub Issues using sequence to sequence models
+             - Natural Language Semantic Code Search
+             - How to create machine learning enabled GitHub Apps to automate the developer workflow
+             - How to achieve Machine Learning Ops with GitHub Actions and Kubeflow- Created systems and conducted research that enabled representation learning of code, issues, repos, and users. - Led launch of CodeSearchNet (www.github.com/github/CodeSearchNet) - Machine Learning Ops & GitHub Actions integrations: https://www.mlops-github.com Open sourced several examples of how to build data products and use deep learning with public GitHub data. These examples can be viewed at: http://hamel.dev, and include - Summarizing GitHub Issues using sequence to sequence models - Natural Language Semantic Code Search - How to create machine learning enabled GitHub Apps to automate the developer workflow - How to achieve Machine Learning Ops with GitHub Actions and Kubeflow
+            +2
+
+Show all 11 experiences
+EducationEducation
+
+    Georgia Institute of Technology logo
+    Georgia Institute of TechnologyGeorgia Institute of Technology
+    Master of Science (M.S.), Computer Science, Machine LearningMaster of Science (M.S.), Computer Science, Machine Learning
+    University of Michigan logo
+    University of MichiganUniversity of Michigan
+    Doctor of Law (J.D.), Cum LaudeDoctor of Law (J.D.), Cum Laude
+            Graduated, but I decided to not pursue a career in law and instead follow my passion for data science and machine learning.Graduated, but I decided to not pursue a career in law and instead follow my passion for data science and machine learning.
+
+Show all 3 educations
+ProjectsProjects
+
+    Top 6% Cdiscount Image ClassificationTop 6% Cdiscount Image Classification
+    Dec 2017 - PresentDec 2017 - Present
+        Show project
+            Image classification of 9Million Images into 5,000 categories for a French e-commerce website (Cdiscount.com), which is similar to Amazon. Utilized deep learning, Keras and Tensorflow to place 35th out of 627 competitors. Image classification of 9Million Images into 5,000 categories for a French e-commerce website (Cdiscount.com), which is similar to Amazon. Utilized deep learning, Keras and Tensorflow to place 35th out of 627 competitors. 
+    Top 4% Rossman Store SalesTop 4% Rossman Store Sales
+    Jan 2016 - PresentJan 2016 - Present
+        Associated with DataRobotAssociated with DataRobot
+        Show project
+            Kaggle Competition: placed in the top 4%. Time series forecasting problem for large German drugstore chain. 
+            Kaggle Competition: placed in the top 4%. Time series forecasting problem for large German drugstore chain. 
+
+Show all 5 projects
+VolunteeringVolunteering
+
+    Instructor, Tutorial: "Feature Extraction and Summarization with Sequence to Sequence Learning"Instructor, Tutorial: "Feature Extraction and Summarization with Sequence to Sequence Learning"
+    KDD 2018 (http://www.kdd.org/kdd2018/)KDD 2018 (http://www.kdd.org/kdd2018/) Aug 2018 - Present · 6 yrs 5 mosAug 2018 - Present · 6 yrs 5 mos EducationEducation
+        KDD Site: 
+        http://www.kdd.org/kdd2018/hands-on-tutorials/view/feature-extraction-and-summarization-with-sequence-to-sequence-learning
+
+        Tutorial Site: 
+        https://kddseq2seq.com/
+        KDD Site: http://www.kdd.org/kdd2018/hands-on-tutorials/view/feature-extraction-and-summarization-with-sequence-to-sequence-learning Tutorial Site: https://kddseq2seq.com/ 
+    DataKind logo
+    Data Scientist, Zidisha Microloan Credit Risk ModelingData Scientist, Zidisha Microloan Credit Risk Modeling
+    DataKindDataKind Oct 2016 - Oct 2017 · 1 yr 1 moOct 2016 - Oct 2017 · 1 yr 1 mo Economic EmpowermentEconomic Empowerment
+        Built default models for micro-financing non-profit Zidisha, which serves East Africa. Utilized machine learning techniques to forecast probability of default at time of loan origination. 
+
+        Engineered features based upon social network, text of loan applications, credit profile and prior history. Used python libraries: spacy, genism, and nltk for natural language processing and xgboost for modeling. Built default models for micro-financing non-profit Zidisha, which serves East Africa. Utilized machine learning techniques to forecast probability of default at time of loan origination. Engineered features based upon social network, text of loan applications, credit profile and prior history. Used python libraries: spacy, genism, and nltk for natural language processing and xgboost for modeling. 
+
+Show all 3 volunteer experiences
+SkillsSkills
+
+    AnalyticsAnalytics
+        Endorsed by Anuj Bhalla and 9 others who are highly skilled at thisEndorsed by Anuj Bhalla and 9 others who are highly skilled at this
+        Endorsed by Kirk Mettler and 3 other mutual connectionsEndorsed by Kirk Mettler and 3 other mutual connections
+        97 endorsements97 endorsements
+    Predictive ModelingPredictive Modeling
+        Endorsed by T. Scott Clendaniel and 6 others who are highly skilled at thisEndorsed by T. Scott Clendaniel and 6 others who are highly skilled at this
+        Endorsed by Christopher Lenaburg and 2 other mutual connectionsEndorsed by Christopher Lenaburg and 2 other mutual connections
+        50 endorsements50 endorsements
+
+Show all 18 skills
+RecommendationsRecommendations
+Recommend Hamel
+
+    Nikole “Nikki” Vaughn profile picture
+    Nikole “Nikki” VaughnNikole “Nikki” Vaughn
+    · 2ndSecond degree connection
+    Outcomes Driven | Board Member | AI & Data Advocate | IT Executive | BizDev | Founder | Curious Establishes strategic systems bringing creative visions to reality. INNOVATION. IMPACT. DELIVERED. * Human factors drive IT*Outcomes Driven | Board Member | AI & Data Advocate | IT Executive | BizDev | Founder | Curious Establishes strategic systems bringing creative visions to reality. INNOVATION. IMPACT. DELIVERED. * Human factors drive IT* October 29, 2010, Nikole “Nikki” managed Hamel directlyOctober 29, 2010, Nikole “Nikki” managed Hamel directly
+            Hamel is hard working, can stay focused amidst chaos, and driven. He is someone I would enjoy to have on a team. He has a strong attention to data detail and is technically savvy.Hamel is hard working, can stay focused amidst chaos, and driven. He is someone I would enjoy to have on a team. He has a strong attention to data detail and is technically savvy.
+
+InterestsInterests
+
+    Yann LeCun profile picture
+    Yann LeCunYann LeCun
+    · 2ndSecond degree connection
+    VP & Chief AI Scientist at MetaVP & Chief AI Scientist at Meta 857,231 followers857,231 followers
+    Simon Sinek profile picture
+    Simon SinekSimon Sinek
+    · 3rdThird degree connection
+    Optimist, New York Times bestselling author of "Start with Why" and "The Infinite Game", and founder of The Optimism CompanyOptimist, New York Times bestselling author of "Start with Why" and "The Infinite Game", and founder of The Optimism Company 8,297,250 followers8,297,250 followers
+
+Show all Top Voices
+Hugo Bowne-Anderson
+Status is online
+Page inboxes
+8 8 new notifications

@@ -1,0 +1,253 @@
+
+0 notifications total
+
+Home
+My Network
+Jobs
+Messaging
+Notifications
+
+    Advertise
+
+Shreya Shankar
+
+Shreya Shankar
+(She/They) 2nd degree connection 2nd
+PhD; interactive & intelligent data processing with LLMs
+
+Berkeley, California, United States Contact info
+
+    500+ connections
+
+Stefan Krawczyk, Ville Tuulos, and 12 other mutual connectionsStefan Krawczyk, Ville Tuulos, and 12 other mutual connections
+
+AboutAbout
+Trying to make machine learning work in the real world. Previously 1st ML engineer @viaduct_ai, ML research @googlebrain, CS @Stanford. She/her.Trying to make machine learning work in the real world. Previously 1st ML engineer @viaduct_ai, ML research @googlebrain, CS @Stanford. She/her.
+ActivityActivity
+
+2,698 followers2,698 followers
+Loaded 3 Posts posts
+
+    Shreya Shankar reposted this • 5d5d
+    New IDE has been released for Shreya Shankar's DocETL product. Starting to look snazzy. Even if you never use this in a production, I think it's valuable to start getting familiar with these types of tools, because we're going to see a deluge of great ones as soon as the UX pattern gets going and familiarized.
+    No alternative text description for this image
+    New IDE has been released for Shreya Shankar's DocETL product. Starting to look snazzy. Even if you never use this in a production, I think it's valuable to start getting familiar with these types of tools, because we're going to see a deluge of great ones as soon as the UX pattern gets going and familiarized. 
+
+Shreya Shankar reposted this • 1mo1mo
+Excited that our DocETL preprint, titled "Agentic Query Rewriting and Evaluation for Complex Document Processing", led by Shreya Shankar — is out!! I'm particularly stoked about our 13 new rewrite "directives"—like rewrite rules, but more abstract—all entirely instantiated by LLM agents to rewrite pipelines into alternatives. All of these alternatives are evaluated by LLMs as well. To me, this work represents a great example of combining the best of what the DB and AI communities has to offer: declarative query specification + a methodical exploration of the search space to find performant (here mostly accuracy) query plans, coupled with LLM agents to instantiate and evaluate the query plans. Take a look and let us know what you think!!
+Excited that our DocETL preprint, titled "Agentic Query Rewriting and Evaluation for Complex Document Processing", led by Shreya Shankar — is out!! 
+
+I'm particularly stoked about our 13 new rewrite "directives"—like rewrite rules, but more abstract—all entirely instantiated by LLM agents to rewrite pipelines into alternatives. All of these alternatives are evaluated by LLMs as well. 
+
+To me, this work represents a great example of combining the best of what the DB and AI communities has to offer: declarative query specification + a methodical exploration of the search space to find performant (here mostly accuracy) query plans, coupled with LLM agents to instantiate and evaluate the query plans. 
+
+Take a look and let us know what you think!! 
+
+Shreya Shankar reposted this • 2mo2mo
+LLMs have made exciting progress on hard tasks! But they still struggle to analyze complex, unstructured documents. We (at UC Berkeley) built DocETL, an open-source, low-code system for LLM-powered data processing: https://lnkd.in/g9-ZGwG3 See our demo: https://www.docetl.com/ GitHub repo: https://lnkd.in/g6zMJpFf Documentation: https://lnkd.in/gWQKdebq, US Presidential Debate Analysis, docetl.com
+LLMs have made exciting progress on hard tasks! But they still struggle to analyze complex, unstructured documents.
+
+We (at UC Berkeley) built DocETL, an open-source, low-code system for LLM-powered data processing: https://lnkd.in/g9-ZGwG3
+
+See our demo: https://www.docetl.com/
+GitHub repo: https://lnkd.in/g6zMJpFf
+Documentation: https://lnkd.in/gWQKdebq
+US Presidential Debate Analysis
+docetl.com
+
+Show all posts
+ExperienceExperience
+
+    Viaduct logo
+    Machine Learning EngineerMachine Learning Engineer
+    ViaductViaduct Jun 2019 - Jan 2021 · 1 yr 8 mosJun 2019 to Jan 2021 · 1 yr 8 mos San Francisco Bay AreaSan Francisco Bay Area
+            At Viaduct, we are laser-focused on developing end-to-end machine learning and data analytics platform to empower OEMs to manage, analyze, and utilize their connected vehicle data. Our platform transforms this data into actionable insights for these OEMs, their partners, and their end-customers. We are a diverse team motivated to solve the hardest problems in the connected vehicle space! Come join us!At Viaduct, we are laser-focused on developing end-to-end machine learning and data analytics platform to empower OEMs to manage, analyze, and utilize their connected vehicle data. Our platform transforms this data into actionable insights for these OEMs, their partners, and their end-customers. We are a diverse team motivated to solve the hardest problems in the connected vehicle space! Come join us!
+    Google logo
+    Research InternResearch Intern
+    GoogleGoogle Sep 2017 - Apr 2019 · 1 yr 8 mosSep 2017 to Apr 2019 · 1 yr 8 mos Mountain View, CAMountain View, CA
+            Did machine learning security research at Google Brain. Collaborated with DeepMind and Stanford. Co-authored 2 publications.Did machine learning security research at Google Brain. Collaborated with DeepMind and Stanford. Co-authored 2 publications.
+    she++ logo
+    Co-DirectorCo-Director
+    she++she++ Sep 2015 - Jan 2018 · 2 yrs 5 mosSep 2015 to Jan 2018 · 2 yrs 5 mos Stanford, CAStanford, CA
+            Led a non-profit to rebrand the tech industry and strengthen a network of future female leaders.Led a non-profit to rebrand the tech industry and strengthen a network of future female leaders.
+    Facebook logo
+    Software Engineering InternSoftware Engineering Intern
+    FacebookFacebook Jun 2017 - Sep 2017 · 4 mosJun 2017 to Sep 2017 · 4 mos Greater New York City AreaGreater New York City Area
+            Working on Civic Engagement tools, helping representatives connect with their constituents.Working on Civic Engagement tools, helping representatives connect with their constituents.
+    Stanford University logo
+    CS106 Section Leader/Teaching AssistantCS106 Section Leader/Teaching Assistant
+    Stanford UniversityStanford University Jan 2016 - Jun 2017 · 1 yr 6 mosJan 2016 to Jun 2017 · 1 yr 6 mos Stanford, CAStanford, CA
+            I taught introductory programming in Java and C++ (CS106A/B/X) to a section of 10 students, help staff office hours, and grade assignments for the Stanford introductory programming courses.I taught introductory programming in Java and C++ (CS106A/B/X) to a section of 10 students, help staff office hours, and grade assignments for the Stanford introductory programming courses.
+
+Show all 6 experiences
+EducationEducation
+
+    UC Berkeley Electrical Engineering & Computer Sciences (EECS) logo
+    UC Berkeley Electrical Engineering & Computer Sciences (EECS)UC Berkeley Electrical Engineering & Computer Sciences (EECS)
+    Doctor of Philosophy - PhD, Computer ScienceDoctor of Philosophy - PhD, Computer Science 20212021
+    Stanford University logo
+    Stanford UniversityStanford University
+    Master's degree, Computer ScienceMaster's degree, Computer Science 2018 - 20192018 - 2019
+            M.S. in Computer Science (Artificial Intelligence)
+
+            Course Assistant for:
+            * CS106B (Programming Abstractions / Data Structures)
+            * CS101 (Principles of Computing)
+            * CS193A (Android Development)
+            * CS379C (Computational Models of the Neocortex)
+            * CS110 (Principles of Computer Systems)M.S. in Computer Science (Artificial Intelligence) Course Assistant for: * CS106B (Programming Abstractions / Data Structures) * CS101 (Principles of Computing) * CS193A (Android Development) * CS379C (Computational Models of the Neocortex) * CS110 (Principles of Computer Systems)
+
+Show all 4 educations
+Licenses & certificationsLicenses & certifications
+
+    CPRCPR
+
+SkillsSkills
+
+    Team LeadershipTeam Leadership
+        Endorsed by 4 colleagues at Stanford University Endorsed by 4 colleagues at Stanford University
+        14 endorsements14 endorsements
+    Startup DevelopmentStartup Development
+        Endorsed by 4 colleagues at Stanford University Endorsed by 4 colleagues at Stanford University
+        13 endorsements13 endorsements
+
+Show all 30 skills
+CoursesCourses
+
+    Artificial Intelligence: Principles and TechniquesArtificial Intelligence: Principles and Techniques
+    CS221CS221
+        Associated with Stanford UniversityAssociated with Stanford University
+    BiologyBiology
+    AP BiologyAP Biology
+        Associated with A&M Consolidated High SchoolAssociated with A&M Consolidated High School
+
+Show all 21 courses
+Honors & awardsHonors & awards
+
+    Bank of America Women Who Tech AttendeeBank of America Women Who Tech Attendee
+    Issued by Bank of America · May 2016Issued by Bank of America · May 2016
+        Associated with Stanford UniversityAssociated with Stanford University
+            Selected to attend the Women Who Tech Conference sponsored by Bank of America in New York.Selected to attend the Women Who Tech Conference sponsored by Bank of America in New York.
+    Qualcomm Women's Collegiate Conference AttendeeQualcomm Women's Collegiate Conference Attendee
+    Issued by Qualcomm · Jan 2016Issued by Qualcomm · Jan 2016
+        Associated with Stanford UniversityAssociated with Stanford University
+            Selected to attend the Qualcomm Women's Collegiate Conference in San Diego.Selected to attend the Qualcomm Women's Collegiate Conference in San Diego.
+
+LanguagesLanguages
+
+    EnglishEnglish
+    Native or bilingual proficiencyNative or bilingual proficiency
+
+OrganizationsOrganizations
+
+    TreeHacksTreeHacks
+    Financial Officer · May 2016 - PresentFinancial Officer · May 2016 - Present
+        Associated with Stanford UniversityAssociated with Stanford University
+    CS198 (Section Leading/Teaching CS)CS198 (Section Leading/Teaching CS)
+    Section Leader/Teaching · Jan 2016 - PresentSection Leader/Teaching · Jan 2016 - Present
+
+Show all 6 organizations
+InterestsInterests
+
+    LinkedIn logo
+    LinkedIn LinkedIn
+    29,165,745 followers29,165,745 followers
+
+Google logo
+Google Google
+35,044,627 followers35,044,627 followers
+
+Show all companies
+More profiles for youMore profiles for you
+
+    Sanjana Srivastava profile picture
+    Sanjana SrivastavaSanjana Srivastava
+    · 3rdThird degree connection
+    Computer Science PhD Student at Stanford UniversityComputer Science PhD Student at Stanford University
+        View profile
+    Deepti Raghavan profile picture
+    Deepti RaghavanDeepti Raghavan
+    · 3rdThird degree connection
+    Assistant Professor of Computer Science at Brown UniversityAssistant Professor of Computer Science at Brown University
+        View profile
+    Isabel Zimmerman profile picture
+    Isabel ZimmermanIsabel Zimmerman
+    · 2ndSecond degree connection
+    Software Engineer at Posit PBCSoftware Engineer at Posit PBC
+
+Aditya Parameswaran profile picture
+Aditya ParameswaranAditya Parameswaran
+· 2ndSecond degree connection
+Associate Professor, UC BerkeleyAssociate Professor, UC Berkeley
+
+Simon Willison profile picture
+Simon WillisonSimon Willison
+· 2ndSecond degree connection
+Founder of the Datasette open source projectFounder of the Datasette open source project
+
+Show all
+Explore Premium profilesExplore Premium profiles
+
+    Yikai Yang profile picture
+    Yikai YangYikai Yang
+    · 2ndSecond degree connection
+    PhD | AI Engineer & Researcher | Investor Fellow | Entrepreneur at HeartPhD | AI Engineer & Researcher | Investor Fellow | Entrepreneur at Heart
+
+Kriti Chhabra profile picture
+Kriti ChhabraKriti Chhabra
+· 2ndSecond degree connection
+Data Scientist at ColesData Scientist at Coles
+
+Goce Ristanoski profile picture
+Goce RistanoskiGoce Ristanoski
+· 2ndSecond degree connection
+Data Science Solutions and AnalyticsData Science Solutions and Analytics
+
+Manny A. profile picture
+Manny A.Manny A.
+· 2ndSecond degree connection
+Data ScientistData Scientist
+
+Try premium to stand outTry premium to stand out
+People you may knowPeople you may know
+
+From Shreya's schoolFrom Shreya's school
+
+    Sukrit Arora profile picture
+    Sukrit AroraSukrit Arora
+    Computer Vision | Deep Learning | Generative Modeling | Machine Learning | Image ProcessingComputer Vision | Deep Learning | Generative Modeling | Machine Learning | Image Processing
+
+Clara Wong-Fannjiang profile picture
+Clara Wong-FannjiangClara Wong-Fannjiang
+Senior Machine Learning Scientist, Prescient Design | GenentechSenior Machine Learning Scientist, Prescient Design | Genentech
+
+Kevin Zhu profile picture
+Kevin ZhuKevin Zhu
+AI Researcher and Director @ AlgoverseAI Researcher and Director @ Algoverse
+
+Rawan Almobarak profile picture
+Rawan AlmobarakRawan Almobarak
+Data Scientist at Misk FoundationData Scientist at Misk Foundation
+
+Janelle Lines profile picture
+Janelle LinesJanelle Lines
+Machine Learning Engineer | Software Engineer, Machine Learning | UC Berkeley EECS Grad | Exploring Scalable ML Systems & Generative AIMachine Learning Engineer | Software Engineer, Machine Learning | UC Berkeley EECS Grad | Exploring Scalable ML Systems & Generative AI
+
+Show all
+You might likeYou might like
+
+Groups for youGroups for you
+
+    Artificial Intelligence, Machine Learning, Data Science, JavaScript, Python, Gen AI, Data Scientist logo
+    Artificial Intelligence, Machine Learning, Data Science, JavaScript, Python, Gen AI, Data ScientistArtificial Intelligence, Machine Learning, Data Science, JavaScript, Python, Gen AI, Data Scientist
+    511,291 members511,291 members
+
+Python Developers Community (moderated) logo
+Python Developers Community (moderated)Python Developers Community (moderated)
+2,422,138 members2,422,138 members
+
+Show all
+Hugo Bowne-Anderson
+Status is online
+Page inboxes
+8 8 new notifications
