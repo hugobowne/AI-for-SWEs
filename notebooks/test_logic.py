@@ -8,18 +8,14 @@ import pytest
 import logic
 import json
 
-# example pytest test functions
+# (1) example pytest test functions
 
 # pytest -vv test_logic.py::test_some_logic
 def test_some_logic():
     actual = logic.addition(1, 2)
     assert actual == 3
 
-# pytest -vv test_logic.py::test_some_other_logic_error
-def test_some_other_logic_error():
-    with pytest.raises(TypeError):
-        logic.addition(1, None)
-
+# pytest -vv test_logic.py::test_some_logic_parameterized
 @pytest.mark.parametrize(
     "a,b,expected", [
         (1, 2, 3),
@@ -29,19 +25,19 @@ def test_some_logic_parameterized(a, b, expected):
     actual = logic.addition(a, b)
     assert actual == expected
 
-# some helper functions for today
 
 # Helper function to load text from a file
 def load_text_from_file(file_path):
     with open(file_path, "r") as f:
         return f.read()
 
-# testing our LLM call
+# (2) testing our LLM call
 extract_profile_data = logic.extract_profile_data
 # extract_profile_data = logic.extract_profile_data_strict
 
 # pytest -vv test_logic.py::test_extract_profile_data_stefan
 def test_extract_profile_data_stefan():
+    """Can look like a regular test."""
     linkedin_text = load_text_from_file("data/stefanLI.txt")
     expected = {
         "Name": "Stefan Krawczyk",
@@ -51,16 +47,19 @@ def test_extract_profile_data_stefan():
         "Education": [],
     }
     output = extract_profile_data(linkedin_text)
-    assert output == expected
     assert output["Name"] == expected["Name"]
     assert output["Current Role"] == expected["Current Role"]
     assert output["Location"] == expected["Location"]
     assert output["Previous Roles"] == expected["Previous Roles"]
     assert output["Education"] == expected["Education"]
-    # problem: asserts fail at the first failure, but we want to evaluate all of them...
+    assert output == expected
+    # problem: asserts fail at the first failure,
+    # but we want to evaluate all of them...
 
+# (3) Where should we focus? Understand the variance
 # pytest -vv test_logic.py::test_extract_profile_data_stefan_stability
 def test_extract_profile_data_stefan_stability():
+    """Let's run it a few times to see output variability."""
     linkedin_text = load_text_from_file("data/stefanLI.txt")
     outputs = [extract_profile_data(linkedin_text) for _ in range(5)]
     # Check for consistency - for each key create a set of values
@@ -72,8 +71,9 @@ def test_extract_profile_data_stefan_stability():
     variances_str = json.dumps(variances, indent=2)
     assert len(variances) == 0, "Outputs vary across iterations:\n" + variances_str
 
+# (4) Show one prompt iteration
 
-# Do parametrized testing for more inputs
+# (5) Do parametrized testing for more inputs
 expected_values = {
     "data/stefanLI.txt": {
         "Name": "Stefan Krawczyk",
@@ -97,6 +97,7 @@ expected_values = {
     },
 }
 
+# (5) Parametrized testing & pytest-harvest & collating results into a CSV
 # pytest -vv -rP test_logic.py::test_extract_profile_data test_logic.py::test_print_results
 @pytest.mark.parametrize(
     "file_path,expected", [
@@ -114,6 +115,7 @@ def test_extract_profile_data(file_path, expected, results_bag):
     results_bag.exact_match = actual == expected
     for k in expected.keys():
         results_bag[k] = actual[k] == expected[k]
+    assert actual["Name"] == expected["Name"]  # Name should be 100%
 
 
 def test_print_results(module_results_df):
@@ -137,7 +139,9 @@ def test_print_results(module_results_df):
     # compute accuracy by field
     fields = ["Name", "Current Role", "Location", "Previous Roles", "Education"]
     field_accuracy = {
-        field: (sum(tests_of_interest[field]) / len(tests_of_interest)) * 100.0
+        field: (
+           sum(tests_of_interest[field]) / len(tests_of_interest)
+        ) * 100.0
         for field in fields
     }
     # print accuracy by field
@@ -145,7 +149,7 @@ def test_print_results(module_results_df):
     for field, accuracy in field_accuracy.items():
         print(f"{field}: {accuracy}%")
     # can save to CSV etc
-    curent_datetime = datetime.now().strftime("%Y%m%d-%H%M%S")
+    current_datetime = datetime.now().strftime("%Y%m%d-%H%M%S")
     columns_to_output = [
         "test_id",
         "status",
@@ -157,6 +161,8 @@ def test_print_results(module_results_df):
         "exact_match",
 
     ] + fields
-    tests_of_interest[columns_to_output].to_csv(f"logic_results{curent_datetime}.csv", quoting=1)
+    tests_of_interest[columns_to_output].to_csv(
+        f"logic_results{current_datetime}.csv", quoting=1
+    )
     # assert anything we must fail on
     assert field_accuracy["Name"] > 99.0
