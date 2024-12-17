@@ -32,7 +32,6 @@ Text:
 Output the result as a JSON object.
 """}
     ]
-
     # LLM call
     response = client.chat.completions.create(
         model="gpt-4o-mini",
