@@ -33,8 +33,8 @@ def load_text_from_file(file_path):
         return f.read()
 
 # (2) testing our LLM call
-# extract_profile_data = logic.extract_profile_data
-extract_profile_data = logic.extract_profile_data_strict
+extract_profile_data = logic.extract_profile_data
+# extract_profile_data = logic.extract_profile_data_strict
 
 # pytest -vv test_logic.py::test_extract_profile_data_stefan
 def test_extract_profile_data_stefan():
