@@ -3,6 +3,7 @@ To run:
 > pytest -vv test_logic.py
 """
 from datetime import datetime
+import concurrent.futures
 
 import pytest
 import logic
@@ -61,7 +62,7 @@ def test_extract_profile_data_stefan():
 def test_extract_profile_data_stefan_stability():
     """Let's run it a few times to see output variability."""
     linkedin_text = load_text_from_file("data/stefanLI.txt")
-    outputs = [extract_profile_data(linkedin_text) for _ in range(5)]
+    outputs = run_in_parallel(linkedin_text, num_iterations=10)
     # Check for consistency - for each key create a set of values
     variances = {}
     for key in outputs[0].keys():
@@ -166,3 +167,13 @@ def test_print_results(module_results_df):
     )
     # assert anything we must fail on
     assert field_accuracy["Name"] > 99.0
+
+#--- helpers
+# Run the extract_profile_data function in parallel
+def run_in_parallel(linkedin_text, num_iterations=10):
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [executor.submit(extract_profile_data, linkedin_text)
+                   for _ in range(num_iterations)]
+        outputs = [future.result()
+                   for future in concurrent.futures.as_completed(futures)]
+    return outputs
