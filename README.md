@@ -22,3 +22,29 @@ If you're a data scientist, machine learning practitioner, or AI enthusiast, thi
 - Most importantly, a sense of curiosity and a desire to learn!
 
 If you have a background in data science, ML, or AI, this workshop will help you understand the software engineering side of building AI applications.
+
+## 🛠️ Setup Instructions (GitHub Codespaces)
+
+This project uses [Poetry](https://python-poetry.org/) for dependency management.
+
+### 1. Install Dependencies
+
+Poetry is pre-installed in Codespaces. From the root of the repo, run:
+
+```bash
+poetry install
+```
+
+### 2. Activate the Environment
+
+To use the virtual environment for normal `python` commands:
+
+```bash
+source $(poetry env info --path)/bin/activate
+```
+
+After that, you can run scripts like:
+
+```bash
+python apps/1-app-query.py
+```
